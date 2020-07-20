@@ -266,7 +266,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/20/LeetCode|%20Number|1.%20Two%20Sum/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/20/LeetCode|%20Number|59.%20Spiral%20Matrix%20II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -280,7 +280,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/07/20/LeetCode%7C%20Number%7C1.%20Two%20Sum/" class="post-title-link" itemprop="url">LeetCode| Number|1. Two Sum</a>
+            <a href="/2020/07/20/LeetCode%7C%20Number%7C59.%20Spiral%20Matrix%20II/" class="post-title-link" itemprop="url">LeetCode| Number|59. Spiral Matrix II</a>
         </h2>
 
         <div class="post-meta">
@@ -291,7 +291,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-07-20 18:25:57 / 修改时间：20:47:02" itemprop="dateCreated datePublished" datetime="2020-07-20T18:25:57+08:00">2020-07-20</time>
+              <time title="创建时间：2020-07-20 18:25:57 / 修改时间：20:49:59" itemprop="dateCreated datePublished" datetime="2020-07-20T18:25:57+08:00">2020-07-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -330,7 +330,7 @@
 <h1 id="Solve"><a href="#Solve" class="headerlink" title="Solve"></a>Solve</h1><h2 id="模拟过程"><a href="#模拟过程" class="headerlink" title="模拟过程"></a>模拟过程</h2><ol>
 <li>二维数组如何初始化<br><a href="https://leetcode-cn.com/problems/spiral-matrix-ii/solution/spiral-matrix-ii-mo-ni-fa-she-ding-bian-jie-qing-x/" target="_blank" rel="noopener">From</a></li>
 </ol>
-<p><img src="/2020/07/20/LeetCode|%20Number|1.%20Two%20Sum/matrix.png" alt></p>
+<p><img src="/2020/07/20/LeetCode|%20Number|59.%20Spiral%20Matrix%20II/matrix.png" alt></p>
 <p><code>let arr = new Array(n).fill(0).map(()=&gt;new Array(n).fill(0));</code></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">n</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number[][]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> generateMatrix = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(n).fill(<span class="number">0</span>).map(<span class="function"><span class="params">()</span>=&gt;</span><span class="keyword">new</span> <span class="built_in">Array</span>(n).fill(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">let</span> num = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> left = <span class="number">0</span>, right = n<span class="number">-1</span>, bottom = n<span class="number">-1</span>, top = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(left &lt;= right &amp;&amp; top &lt;= bottom)&#123;</span><br><span class="line">        <span class="comment">//[top] left -&gt; right</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = left; i &lt;= right; i++)&#123;</span><br><span class="line">            arr[top][i] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        top ++;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//[right] top -&gt; bottom</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = top; i &lt;= bottom; i++)&#123;</span><br><span class="line">            arr[i][right] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        right --;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// [bottom] right -&gt; left</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = right; i &gt;= left; i--)&#123;</span><br><span class="line">            arr[bottom][i] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        bottom --;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// [left] bottom -&gt; top</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = bottom; i &gt;= top; i--)&#123;</span><br><span class="line">            arr[i][left] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        left ++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
