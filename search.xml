@@ -43,21 +43,6 @@
       </categories>
   </entry>
   <entry>
-    <title>前端｜前端面试题</title>
-    <url>/2020/07/13/100%E9%81%93%E6%9C%89%E7%AD%94%E6%A1%88%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
-    <content><![CDATA[<p>来源：<a href="https://juejin.im/post/5f081d496fb9a07eb90cb5cf" target="_blank" rel="noopener">100道有答案的前端面试题</a></p>
-<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h1 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h1><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>#其他资源<br><a href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener">前端面试星球</a><br><a href="https://github.com/sl1673495/leetcode-javascript" target="_blank" rel="noopener">Welcome to leetcode-javascript</a></p>
-]]></content>
-      <categories>
-        <category>javascript</category>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>javascript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前端｜Angular &amp; React &amp; Vue 对比</title>
     <url>/2020/07/13/Angular%20&amp;%20React%20&amp;%20Vue%20%E5%AF%B9%E6%AF%94/</url>
     <content><![CDATA[<p>#相同点：</p>
@@ -117,6 +102,21 @@
         <tag>前端</tag>
         <tag>Angular</tag>
         <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端｜前端面试题</title>
+    <url>/2020/07/13/100%E9%81%93%E6%9C%89%E7%AD%94%E6%A1%88%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<p>来源：<a href="https://juejin.im/post/5f081d496fb9a07eb90cb5cf" target="_blank" rel="noopener">100道有答案的前端面试题</a></p>
+<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h1 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h1><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>#其他资源<br><a href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener">前端面试星球</a><br><a href="https://github.com/sl1673495/leetcode-javascript" target="_blank" rel="noopener">Welcome to leetcode-javascript</a></p>
+]]></content>
+      <categories>
+        <category>javascript</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -187,8 +187,8 @@
     <url>/2020/07/13/JS-DOM-%E8%99%9A%E6%8B%9FDOM/</url>
     <content><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1>]]></content>
       <categories>
-        <category>javascript</category>
         <category>前端</category>
+        <category>javascript</category>
         <category>DOM</category>
       </categories>
       <tags>
@@ -299,38 +299,6 @@
       </tags>
   </entry>
   <entry>
-    <title>LeetCode| Number|59. Spiral Matrix II</title>
-    <url>/2020/07/20/LeetCode%7C%20Number%7C59.%20Spiral%20Matrix%20II/</url>
-    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Given a positive integer n, generate a square matrix filled with elements from 1 to n2 in spiral order.</p>
-<p>Example:</p>
-<blockquote>
-<p>Input: 3<br>Output:<br>[<br> [ 1, 2, 3 ],<br> [ 8, 9, 4 ],<br> [ 7, 6, 5 ]<br>]</p>
-</blockquote>
-<h1 id="Solve"><a href="#Solve" class="headerlink" title="Solve"></a>Solve</h1><h2 id="模拟过程"><a href="#模拟过程" class="headerlink" title="模拟过程"></a>模拟过程</h2><p><a href="https://leetcode-cn.com/problems/spiral-matrix-ii/solution/spiral-matrix-ii-mo-ni-fa-she-ding-bian-jie-qing-x/" target="_blank" rel="noopener">From</a></p>
-<p><img src="/2020/07/20/LeetCode|%20Number|59.%20Spiral%20Matrix%20II/matrix.png" alt></p>
-<ol>
-<li><p>二维数组如何初始化<br><code>let arr = new Array(n).fill(0).map(()=&gt;new Array(n).fill(0));</code></p>
-</li>
-<li><p>复杂度</p>
-<ul>
-<li>时间复杂度：均摊复杂度都为 O(1)</li>
-<li>空间复杂度：O(n)</li>
-</ul>
-</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">n</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number[][]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> generateMatrix = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(n).fill(<span class="number">0</span>).map(<span class="function"><span class="params">()</span>=&gt;</span><span class="keyword">new</span> <span class="built_in">Array</span>(n).fill(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">let</span> num = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> left = <span class="number">0</span>, right = n<span class="number">-1</span>, bottom = n<span class="number">-1</span>, top = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(left &lt;= right &amp;&amp; top &lt;= bottom)&#123;</span><br><span class="line">        <span class="comment">//[top] left -&gt; right</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = left; i &lt;= right; i++)&#123;</span><br><span class="line">            arr[top][i] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        top ++;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//[right] top -&gt; bottom</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = top; i &lt;= bottom; i++)&#123;</span><br><span class="line">            arr[i][right] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        right --;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// [bottom] right -&gt; left</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = right; i &gt;= left; i--)&#123;</span><br><span class="line">            arr[bottom][i] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        bottom --;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// [left] bottom -&gt; top</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = bottom; i &gt;= top; i--)&#123;</span><br><span class="line">            arr[i][left] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        left ++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode刷题</category>
-        <category>Number</category>
-        <category>Medium</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-        <tag>Number</tag>
-        <tag>Medium</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LeetCode|Array|88 Merge Sorted Array</title>
     <url>/2020/07/14/LeetCode%7CArray%7C88%20-%20Merge%20Sorted%20Array/</url>
     <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank" rel="noopener">88. Merge Sorted Array</a><br>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.</p>
@@ -367,6 +335,38 @@
       <categories>
         <category>LeetCode刷题</category>
       </categories>
+  </entry>
+  <entry>
+    <title>LeetCode| Number|59. Spiral Matrix II</title>
+    <url>/2020/07/20/LeetCode%7C%20Number%7C59.%20Spiral%20Matrix%20II/</url>
+    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Given a positive integer n, generate a square matrix filled with elements from 1 to n2 in spiral order.</p>
+<p>Example:</p>
+<blockquote>
+<p>Input: 3<br>Output:<br>[<br> [ 1, 2, 3 ],<br> [ 8, 9, 4 ],<br> [ 7, 6, 5 ]<br>]</p>
+</blockquote>
+<h1 id="Solve"><a href="#Solve" class="headerlink" title="Solve"></a>Solve</h1><h2 id="模拟过程"><a href="#模拟过程" class="headerlink" title="模拟过程"></a>模拟过程</h2><p><a href="https://leetcode-cn.com/problems/spiral-matrix-ii/solution/spiral-matrix-ii-mo-ni-fa-she-ding-bian-jie-qing-x/" target="_blank" rel="noopener">From</a></p>
+<p><img src="/2020/07/20/LeetCode|%20Number|59.%20Spiral%20Matrix%20II/matrix.png" alt></p>
+<ol>
+<li><p>二维数组如何初始化<br><code>let arr = new Array(n).fill(0).map(()=&gt;new Array(n).fill(0));</code></p>
+</li>
+<li><p>复杂度</p>
+<ul>
+<li>时间复杂度：均摊复杂度都为 O(1)</li>
+<li>空间复杂度：O(n)</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">n</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number[][]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> generateMatrix = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(n).fill(<span class="number">0</span>).map(<span class="function"><span class="params">()</span>=&gt;</span><span class="keyword">new</span> <span class="built_in">Array</span>(n).fill(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">let</span> num = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> left = <span class="number">0</span>, right = n<span class="number">-1</span>, bottom = n<span class="number">-1</span>, top = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(left &lt;= right &amp;&amp; top &lt;= bottom)&#123;</span><br><span class="line">        <span class="comment">//[top] left -&gt; right</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = left; i &lt;= right; i++)&#123;</span><br><span class="line">            arr[top][i] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        top ++;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//[right] top -&gt; bottom</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = top; i &lt;= bottom; i++)&#123;</span><br><span class="line">            arr[i][right] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        right --;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// [bottom] right -&gt; left</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = right; i &gt;= left; i--)&#123;</span><br><span class="line">            arr[bottom][i] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        bottom --;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// [left] bottom -&gt; top</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = bottom; i &gt;= top; i--)&#123;</span><br><span class="line">            arr[i][left] = num++;</span><br><span class="line">        &#125;</span><br><span class="line">        left ++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode刷题</category>
+        <category>Number</category>
+        <category>Medium</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>Number</tag>
+        <tag>Medium</tag>
+      </tags>
   </entry>
   <entry>
     <title>LeetCode|DFS|198 HouseRobber</title>
@@ -473,38 +473,6 @@
       </tags>
   </entry>
   <entry>
-    <title>LeetCode|Greedy|200 Number of Islands</title>
-    <url>/2020/07/15/LeetCode%7CGreedy%7C200%20Number%20of%20Islands%20/</url>
-    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.</p>
-<p>Example 1:</p>
-<blockquote>
-<p>Input: grid = [<br>  [“1”,”1”,”1”,”1”,”0”],<br>  [“1”,”1”,”0”,”1”,”0”],<br>  [“1”,”1”,”0”,”0”,”0”],<br>  [“0”,”0”,”0”,”0”,”0”]<br>]<br>Output: 1</p>
-</blockquote>
-<p>Example 2:</p>
-<p><code>Input: grid = [
-  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],
-  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],
-  [&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],
-  [&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;]
-]
-Output: 3</code></p>
-<h1 id="Solve"><a href="#Solve" class="headerlink" title="Solve"></a>Solve</h1><p><a href="https://leetcode.com/problems/number-of-islands/discuss/429842/JavaScript-DFS-Commented-Thought-Process-Beats-100-Time-and-Space" target="_blank" rel="noopener">here</a></p>
-<p>Below is what I typed out on a google doc in preparation for a google phone interview.<br>I thought it may be helpful for others to see and give feedback on my thought process, and if it makes sense/is followable. After all, that’s what I want my interviewer to do, understand me.<br>Goal: Count number of islands<br>Rules:</p>
-<p>An island is surrounded by water(0’s)<br>We count things apart of our island if it is horizontal or vertical connected<br>Plan:<br>Start at the top left of the 2d array, and visit the first row, and all its columns, trying to find the start of the first island<br>Once we find a 1, we can increment the number of islands, but we want to know where the island ends. So let’s look and follow any of the horizontal or vertical spots near the current position we are on.<br>First, let’s mark the current start/visited parts of the islands as visited by turning them into a 0,<br>Second, explore all the adjacent possibilities,<br>If one of them is a 1, recursively turn it into a 0 and check its children<br>Once we are done, we should have gotten rid of the island that we discovered and can move on to the next island, if it exists in the 2d array</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;character[][]&#125;</span> <span class="variable">grid</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> numIslands = <span class="function"><span class="keyword">function</span>(<span class="params">grid</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!grid)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> m =<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> n = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; grid.length; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; grid[i].length; j++)&#123;</span><br><span class="line">            res += grid[i][j] -<span class="string">"0"</span>;</span><br><span class="line">            dfs(i, j, grid);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dfs</span>(<span class="params">x, y, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;<span class="number">0</span> || y&lt; <span class="number">0</span>|| x&gt;= array.length || y&gt;= array[<span class="number">0</span>].length || array[x][y] ===<span class="string">"0"</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line">    array[x][y] = <span class="string">"0"</span>;</span><br><span class="line">    dfs(x<span class="number">-1</span>, y, array);</span><br><span class="line">    dfs(x+<span class="number">1</span>, y, array);</span><br><span class="line">    dfs(x, y<span class="number">-1</span>, array);</span><br><span class="line">    dfs(x, y+<span class="number">1</span>, array);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <categories>
-        <category>LeetCode刷题</category>
-        <category>DFS</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-        <tag>DFS&quot;</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LeetCode|Greedy|455 Assign Cookies</title>
     <url>/2020/07/14/LeetCode%7CGreedy%7C455_Assign%20Cookies/</url>
     <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Assume you are an awesome parent and want to give your children some cookies. But, you should give each child at most one cookie. Each child i has a greed factor gi, which is the minimum size of a cookie that the child will be content with; and each cookie j has a size sj. If sj &gt;= gi, we can assign the cookie j to the child i, and the child i will be content. Your goal is to maximize the number of your content children and output the maximum number.</p>
@@ -535,6 +503,38 @@ Output: 3</code></p>
       <tags>
         <tag>LeetCode</tag>
         <tag>Greedy&quot;</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LeetCode|Greedy|200 Number of Islands</title>
+    <url>/2020/07/15/LeetCode%7CGreedy%7C200%20Number%20of%20Islands%20/</url>
+    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.</p>
+<p>Example 1:</p>
+<blockquote>
+<p>Input: grid = [<br>  [“1”,”1”,”1”,”1”,”0”],<br>  [“1”,”1”,”0”,”1”,”0”],<br>  [“1”,”1”,”0”,”0”,”0”],<br>  [“0”,”0”,”0”,”0”,”0”]<br>]<br>Output: 1</p>
+</blockquote>
+<p>Example 2:</p>
+<p><code>Input: grid = [
+  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],
+  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],
+  [&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],
+  [&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;]
+]
+Output: 3</code></p>
+<h1 id="Solve"><a href="#Solve" class="headerlink" title="Solve"></a>Solve</h1><p><a href="https://leetcode.com/problems/number-of-islands/discuss/429842/JavaScript-DFS-Commented-Thought-Process-Beats-100-Time-and-Space" target="_blank" rel="noopener">here</a></p>
+<p>Below is what I typed out on a google doc in preparation for a google phone interview.<br>I thought it may be helpful for others to see and give feedback on my thought process, and if it makes sense/is followable. After all, that’s what I want my interviewer to do, understand me.<br>Goal: Count number of islands<br>Rules:</p>
+<p>An island is surrounded by water(0’s)<br>We count things apart of our island if it is horizontal or vertical connected<br>Plan:<br>Start at the top left of the 2d array, and visit the first row, and all its columns, trying to find the start of the first island<br>Once we find a 1, we can increment the number of islands, but we want to know where the island ends. So let’s look and follow any of the horizontal or vertical spots near the current position we are on.<br>First, let’s mark the current start/visited parts of the islands as visited by turning them into a 0,<br>Second, explore all the adjacent possibilities,<br>If one of them is a 1, recursively turn it into a 0 and check its children<br>Once we are done, we should have gotten rid of the island that we discovered and can move on to the next island, if it exists in the 2d array</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;character[][]&#125;</span> <span class="variable">grid</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> numIslands = <span class="function"><span class="keyword">function</span>(<span class="params">grid</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!grid)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> m =<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> n = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; grid.length; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; grid[i].length; j++)&#123;</span><br><span class="line">            res += grid[i][j] -<span class="string">"0"</span>;</span><br><span class="line">            dfs(i, j, grid);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dfs</span>(<span class="params">x, y, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;<span class="number">0</span> || y&lt; <span class="number">0</span>|| x&gt;= array.length || y&gt;= array[<span class="number">0</span>].length || array[x][y] ===<span class="string">"0"</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line">    array[x][y] = <span class="string">"0"</span>;</span><br><span class="line">    dfs(x<span class="number">-1</span>, y, array);</span><br><span class="line">    dfs(x+<span class="number">1</span>, y, array);</span><br><span class="line">    dfs(x, y<span class="number">-1</span>, array);</span><br><span class="line">    dfs(x, y+<span class="number">1</span>, array);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>LeetCode刷题</category>
+        <category>DFS</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>DFS&quot;</tag>
       </tags>
   </entry>
   <entry>
@@ -726,6 +726,26 @@ Output: 3</code></p>
       </categories>
   </entry>
   <entry>
+    <title>LeetCode|String|344. Reverse String</title>
+    <url>/2020/07/17/LeetCode%7CString%7C344.%20Reverse%20String/</url>
+    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Write a function that reverses a string. The input string is given as an array of characters char[].</p>
+<p>Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.</p>
+<p>You may assume all the characters consist of printable ascii characters.</p>
+<p>Example 1:</p>
+<blockquote>
+<p>Input: [“h”,”e”,”l”,”l”,”o”]<br>Output: [“o”,”l”,”l”,”e”,”h”]</p>
+</blockquote>
+<p>Example 2:</p>
+<blockquote>
+<p>Input: [“H”,”a”,”n”,”n”,”a”,”h”]<br>Output: [“h”,”a”,”n”,”n”,”a”,”H”]</p>
+</blockquote>
+<h1 id="Solve"><a href="#Solve" class="headerlink" title="Solve"></a>Solve</h1><p>String 最后一位是 undefined</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;character[]&#125;</span> <span class="variable">s</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;void&#125;</span> </span>Do not return anything, modify s in-place instead.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseString = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; s.length/<span class="number">2</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">var</span> temp = s[i];</span><br><span class="line">        s[i] = s[s.length - i <span class="number">-1</span>]</span><br><span class="line">        s[s.length - i <span class="number">-1</span>] = temp</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode刷题</category>
+      </categories>
+  </entry>
+  <entry>
     <title>LeetCode|String|20 ValidParentheses</title>
     <url>/2020/07/14/LeetCode%7CString%7C20_ValidParentheses/</url>
     <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Given a string containing just the characters ‘(‘, ‘)’, ‘{‘, ‘}’, ‘[‘ and ‘]’, determine if the input string is valid.</p>
@@ -765,23 +785,17 @@ Output: 3</code></p>
       </categories>
   </entry>
   <entry>
-    <title>LeetCode|String|344. Reverse String</title>
-    <url>/2020/07/17/LeetCode%7CString%7C344.%20Reverse%20String/</url>
-    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Write a function that reverses a string. The input string is given as an array of characters char[].</p>
-<p>Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.</p>
-<p>You may assume all the characters consist of printable ascii characters.</p>
-<p>Example 1:</p>
-<blockquote>
-<p>Input: [“h”,”e”,”l”,”l”,”o”]<br>Output: [“o”,”l”,”l”,”e”,”h”]</p>
-</blockquote>
-<p>Example 2:</p>
-<blockquote>
-<p>Input: [“H”,”a”,”n”,”n”,”a”,”h”]<br>Output: [“h”,”a”,”n”,”n”,”a”,”H”]</p>
-</blockquote>
-<h1 id="Solve"><a href="#Solve" class="headerlink" title="Solve"></a>Solve</h1><p>String 最后一位是 undefined</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;character[]&#125;</span> <span class="variable">s</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;void&#125;</span> </span>Do not return anything, modify s in-place instead.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseString = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; s.length/<span class="number">2</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">var</span> temp = s[i];</span><br><span class="line">        s[i] = s[s.length - i <span class="number">-1</span>]</span><br><span class="line">        s[s.length - i <span class="number">-1</span>] = temp</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>LeetCode|String|Backtrack|22. Generate Parentheses</title>
+    <url>/2020/07/17/LeetCode%7CString%7CBacktrack%7C22.%20Generate%20Parentheses/</url>
+    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.</p>
+<p>For example, given n = 3, a solution set is:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line">  &quot;((()))&quot;,</span><br><span class="line">  &quot;(()())&quot;,</span><br><span class="line">  &quot;(())()&quot;,</span><br><span class="line">  &quot;()(())&quot;,</span><br><span class="line">  &quot;()()()&quot;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Solve"><a href="#Solve" class="headerlink" title="Solve"></a>Solve</h1><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">n</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;string[]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> generateParenthesis = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> res = []</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">go</span>(<span class="params">left, right, str</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(left &gt; right)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(left ===<span class="number">0</span> &amp;&amp; right ===<span class="number">0</span>)&#123;</span><br><span class="line">            res.push(str);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(left &gt; <span class="number">0</span>)</span><br><span class="line">            go(left<span class="number">-1</span>, right, str + <span class="string">'('</span>);</span><br><span class="line">        <span class="keyword">if</span>(right &gt; <span class="number">0</span>)</span><br><span class="line">            go(left, right<span class="number">-1</span>, str + <span class="string">')'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    go(n,n,<span class="string">''</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>LeetCode刷题</category>
+        <category>Backtracking</category>
       </categories>
   </entry>
   <entry>
@@ -847,17 +861,27 @@ Output: 3</code></p>
       </categories>
   </entry>
   <entry>
-    <title>LeetCode|String|Backtrack|22. Generate Parentheses</title>
-    <url>/2020/07/17/LeetCode%7CString%7CBacktrack%7C22.%20Generate%20Parentheses/</url>
-    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.</p>
-<p>For example, given n = 3, a solution set is:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line">  &quot;((()))&quot;,</span><br><span class="line">  &quot;(()())&quot;,</span><br><span class="line">  &quot;(())()&quot;,</span><br><span class="line">  &quot;()(())&quot;,</span><br><span class="line">  &quot;()()()&quot;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+    <title>LeetCode|Two_Pointer|16 3Sum Closet</title>
+    <url>/2020/07/14/LeetCode%7CTwo_Pointer%7C16-3Sum_Closet/</url>
+    <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>16—<a href="https://leetcode.com/problems/3sum-closest/" target="_blank" rel="noopener">3Sum Closest</a><br>Medium</p>
+<p>Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
+<p>Example 1:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input: nums &#x3D; [-1,2,1,-4], target &#x3D; 1</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 &#x3D; 2).</span><br></pre></td></tr></table></figure>
 
 
-<h1 id="Solve"><a href="#Solve" class="headerlink" title="Solve"></a>Solve</h1><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">n</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;string[]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> generateParenthesis = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> res = []</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">go</span>(<span class="params">left, right, str</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(left &gt; right)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(left ===<span class="number">0</span> &amp;&amp; right ===<span class="number">0</span>)&#123;</span><br><span class="line">            res.push(str);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(left &gt; <span class="number">0</span>)</span><br><span class="line">            go(left<span class="number">-1</span>, right, str + <span class="string">'('</span>);</span><br><span class="line">        <span class="keyword">if</span>(right &gt; <span class="number">0</span>)</span><br><span class="line">            go(left, right<span class="number">-1</span>, str + <span class="string">')'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    go(n,n,<span class="string">''</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+<p>Constraints:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3 &lt;&#x3D; nums.length &lt;&#x3D; 10^3</span><br><span class="line">-10^3 &lt;&#x3D; nums[i] &lt;&#x3D; 10^3</span><br><span class="line">-10^4 &lt;&#x3D; target &lt;&#x3D; 10^4</span><br></pre></td></tr></table></figure>
+<h1 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h1><h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3><p>先按照升序排序，然后分别从左往右依次选择一个基础点 i（0 &lt;= i &lt;= nums.length - 3），在基础点的右侧用双指针去不断的找最小的差值。</p>
+<p>假设基础点是 i，初始化的时候，双指针分别是：</p>
+<p>left：i + 1，基础点右边一位。<br>right: nums.length - 1 数组最后一位。<br>然后求此时的和，如果和大于 target，那么可以把右指针左移一位，去试试更小一点的值，反之则把左指针右移。</p>
+<p>在这个过程中，不断更新全局的最小差值 min，和此时记录下来的和 res。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[]&#125;</span> <span class="variable">nums</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">target</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> threeSumClosest = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> len = nums.length;</span><br><span class="line">    <span class="keyword">if</span>(len === <span class="number">3</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> getSum(nums);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    nums.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span> a-b);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> min = <span class="literal">Infinity</span>;</span><br><span class="line">    <span class="keyword">let</span> res;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len - <span class="number">2</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">let</span> basic = nums[i];</span><br><span class="line">        <span class="keyword">let</span> left = i + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">let</span> right = len - <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">            <span class="keyword">let</span> sum = basic + nums[left] + nums[right];</span><br><span class="line">            <span class="keyword">let</span> diff = <span class="built_in">Math</span>.abs(sum - target);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(diff &lt; min)&#123;</span><br><span class="line">                min = diff;</span><br><span class="line">                res = sum;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(sum &lt; target)&#123;</span><br><span class="line">                left ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>( sum &gt; target)&#123;</span><br><span class="line">                right --;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> sum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">nums</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> nums.reduce(<span class="function">(<span class="params">total, cur</span>)=&gt;</span> total + cur, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h3><p><a href="https://mp.weixin.qq.com/s/7mJSpnHE319swy0LStpavQ" target="_blank" rel="noopener">双指针问题</a></p>
+]]></content>
       <categories>
         <category>LeetCode刷题</category>
-        <category>Backtracking</category>
+        <category>Two_Pointer</category>
       </categories>
   </entry>
   <entry>
@@ -910,30 +934,6 @@ Output: 3</code></p>
       </tags>
   </entry>
   <entry>
-    <title>LeetCode|Two_Pointer|16 3Sum Closet</title>
-    <url>/2020/07/14/LeetCode%7CTwo_Pointer%7C16-3Sum_Closet/</url>
-    <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>16—<a href="https://leetcode.com/problems/3sum-closest/" target="_blank" rel="noopener">3Sum Closest</a><br>Medium</p>
-<p>Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
-<p>Example 1:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Input: nums &#x3D; [-1,2,1,-4], target &#x3D; 1</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 &#x3D; 2).</span><br></pre></td></tr></table></figure>
-
-
-<p>Constraints:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3 &lt;&#x3D; nums.length &lt;&#x3D; 10^3</span><br><span class="line">-10^3 &lt;&#x3D; nums[i] &lt;&#x3D; 10^3</span><br><span class="line">-10^4 &lt;&#x3D; target &lt;&#x3D; 10^4</span><br></pre></td></tr></table></figure>
-<h1 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h1><h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3><p>先按照升序排序，然后分别从左往右依次选择一个基础点 i（0 &lt;= i &lt;= nums.length - 3），在基础点的右侧用双指针去不断的找最小的差值。</p>
-<p>假设基础点是 i，初始化的时候，双指针分别是：</p>
-<p>left：i + 1，基础点右边一位。<br>right: nums.length - 1 数组最后一位。<br>然后求此时的和，如果和大于 target，那么可以把右指针左移一位，去试试更小一点的值，反之则把左指针右移。</p>
-<p>在这个过程中，不断更新全局的最小差值 min，和此时记录下来的和 res。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[]&#125;</span> <span class="variable">nums</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">target</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> threeSumClosest = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> len = nums.length;</span><br><span class="line">    <span class="keyword">if</span>(len === <span class="number">3</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> getSum(nums);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    nums.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span> a-b);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> min = <span class="literal">Infinity</span>;</span><br><span class="line">    <span class="keyword">let</span> res;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len - <span class="number">2</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">let</span> basic = nums[i];</span><br><span class="line">        <span class="keyword">let</span> left = i + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">let</span> right = len - <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">            <span class="keyword">let</span> sum = basic + nums[left] + nums[right];</span><br><span class="line">            <span class="keyword">let</span> diff = <span class="built_in">Math</span>.abs(sum - target);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(diff &lt; min)&#123;</span><br><span class="line">                min = diff;</span><br><span class="line">                res = sum;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(sum &lt; target)&#123;</span><br><span class="line">                left ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>( sum &gt; target)&#123;</span><br><span class="line">                right --;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> sum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">nums</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> nums.reduce(<span class="function">(<span class="params">total, cur</span>)=&gt;</span> total + cur, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h3><p><a href="https://mp.weixin.qq.com/s/7mJSpnHE319swy0LStpavQ" target="_blank" rel="noopener">双指针问题</a></p>
-]]></content>
-      <categories>
-        <category>LeetCode刷题</category>
-        <category>Two_Pointer</category>
-      </categories>
-  </entry>
-  <entry>
     <title>LeetCode|stack|56 Merge Intervals</title>
     <url>/2020/07/14/LeetCode%7Cstack%7C56%20-%20Merge%20Intervals/</url>
     <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a><a href="https://leetcode.com/problems/merge-intervals/" target="_blank" rel="noopener">题目</a></h1><p>Given a collection of intervals, merge all overlapping intervals.</p>
@@ -956,82 +956,6 @@ Output: 3</code></p>
       <tags>
         <tag>LeetCode</tag>
         <tag>stack</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端｜视频 ｜延迟分析</title>
-    <url>/2020/07/13/RTMP%20%E5%BB%B6%E8%BF%9F%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<p>#RTMP<br>RTMP是Real Time Messaging Protocol（实时消息传输协议）的首字母缩写。该协议基于TCP，是一个协议族，包括RTMP基本协议及RTMPT/RTMPS/RTMPE等多种变种。</p>
-<p>RTMP是一种设计用来进行实时数据通信的网络协议，主要用来在Flash/AIR平台和支持RTMP协议的流媒体/交互服务器之间进行音视频和数据通信。支持该协议的软件包括Adobe Media Server/Ultrant Media Server/red5等。</p>
-<ul>
-<li>RTMP工作在TCP之上，默认使用端口1935；</li>
-<li>RTMPE在RTMP的基础上增加了加密功能；</li>
-<li>RTMPT封装在HTTP请求之上，可穿透防火墙；</li>
-<li>RTMPS类似RTMPT，增加了TLS/SSL的安全功能。</li>
-</ul>
-<p><a href="https://www.jianshu.com/p/5ce11c20a9df" target="_blank" rel="noopener">来自</a></p>
-<h1 id="RTMP-延迟分析"><a href="#RTMP-延迟分析" class="headerlink" title="RTMP 延迟分析"></a>RTMP 延迟分析</h1><p>RTMP和HLS基本上可以覆盖所有客户端观看</p>
-<ul>
-<li>HLS主要是延时比较大</li>
-<li>RTMP主要优势在于延时低</li>
-</ul>
-<h1 id="应用场景（Verify）"><a href="#应用场景（Verify）" class="headerlink" title="应用场景（Verify）"></a>应用场景（Verify）</h1><p>低延时应用场景包括：</p>
-<ul>
-<li><p>互动式直播：譬如2013年大行其道的美女主播，游戏直播等等。</p>
-<ul>
-<li>各种主播，流媒体分发给用户观看。用户可以文字聊天和主播互动。</li>
-</ul>
-</li>
-<li><p>视频会议：我们要是有同事出差在外地，就用视频会议开内部会议。</p>
-<ul>
-<li>其实会议1秒延时无所谓，因为人家讲完话后，其他人需要思考。</li>
-<li>思考的延时也会在1秒左右。当然如果用视频会议吵架就不行。</li>
-</ul>
-</li>
-<li><p>其他：监控，直播也有些地方需要对延迟有要求。</p>
-<ul>
-<li>互联网上RTMP协议的延迟基本上能够满足要求。<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1></li>
-</ul>
-</li>
-</ul>
-<ol>
-<li><a href="https://draveness.me/whys-the-design-live-streaming-latency/" target="_blank" rel="noopener">为什么流媒体直播的延迟很高</a></li>
-<li><a href="https://blog.csdn.net/lcalqf/article/details/52993630" target="_blank" rel="noopener">RTMP 延迟分析</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/73984438" target="_blank" rel="noopener">视频和视频帧：ffmpeg的RTMP推流</a></li>
-<li><a href="https://www.jianshu.com/p/c04d810b7562" target="_blank" rel="noopener">视频传输协议详解（RTMP、RTSP、HLS）</a></li>
-<li><a href="https://www.jianshu.com/p/5ce11c20a9df" target="_blank" rel="noopener">RTMP协议解析（一） —— 基本了解</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/27368329" target="_blank" rel="noopener">流媒体系统的RTMP协议</a></li>
-<li><a href="https://blog.csdn.net/dong_beijing/article/details/60776248" target="_blank" rel="noopener">通过信号量和共享内存实现h264码流在不同进程间传输</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>协议</category>
-        <category>前端</category>
-        <category>视频</category>
-        <category>延迟</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>视频</tag>
-        <tag>延迟</tag>
-        <tag>协议</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端｜React|Redux</title>
-    <url>/2020/07/13/React-Redux-store/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>javascript</category>
-        <category>前端</category>
-        <category>React</category>
-        <category>Redux</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>javascript</tag>
-        <tag>React</tag>
-        <tag>Redux</tag>
       </tags>
   </entry>
   <entry>
@@ -1129,18 +1053,80 @@ Output: 3</code></p>
       </tags>
   </entry>
   <entry>
-    <title>中间件策略</title>
-    <url>/2020/07/18/%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%AD%96%E7%95%A5/</url>
-    <content><![CDATA[<p>中间件策略</p>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><ul>
-<li><a href="http://jm.taobao.org/archives/page/46/" target="_blank" rel="noopener">淘宝中间件博客</a></li>
+    <title>前端｜React|Redux</title>
+    <url>/2020/07/13/React-Redux-store/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>javascript</category>
+        <category>前端</category>
+        <category>React</category>
+        <category>Redux</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>React</tag>
+        <tag>javascript</tag>
+        <tag>Redux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端｜视频 ｜延迟分析</title>
+    <url>/2020/07/13/RTMP%20%E5%BB%B6%E8%BF%9F%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<p>#RTMP<br>RTMP是Real Time Messaging Protocol（实时消息传输协议）的首字母缩写。该协议基于TCP，是一个协议族，包括RTMP基本协议及RTMPT/RTMPS/RTMPE等多种变种。</p>
+<p>RTMP是一种设计用来进行实时数据通信的网络协议，主要用来在Flash/AIR平台和支持RTMP协议的流媒体/交互服务器之间进行音视频和数据通信。支持该协议的软件包括Adobe Media Server/Ultrant Media Server/red5等。</p>
+<ul>
+<li>RTMP工作在TCP之上，默认使用端口1935；</li>
+<li>RTMPE在RTMP的基础上增加了加密功能；</li>
+<li>RTMPT封装在HTTP请求之上，可穿透防火墙；</li>
+<li>RTMPS类似RTMPT，增加了TLS/SSL的安全功能。</li>
 </ul>
+<p><a href="https://www.jianshu.com/p/5ce11c20a9df" target="_blank" rel="noopener">来自</a></p>
+<h1 id="RTMP-延迟分析"><a href="#RTMP-延迟分析" class="headerlink" title="RTMP 延迟分析"></a>RTMP 延迟分析</h1><p>RTMP和HLS基本上可以覆盖所有客户端观看</p>
+<ul>
+<li>HLS主要是延时比较大</li>
+<li>RTMP主要优势在于延时低</li>
+</ul>
+<h1 id="应用场景（Verify）"><a href="#应用场景（Verify）" class="headerlink" title="应用场景（Verify）"></a>应用场景（Verify）</h1><p>低延时应用场景包括：</p>
+<ul>
+<li><p>互动式直播：譬如2013年大行其道的美女主播，游戏直播等等。</p>
+<ul>
+<li>各种主播，流媒体分发给用户观看。用户可以文字聊天和主播互动。</li>
+</ul>
+</li>
+<li><p>视频会议：我们要是有同事出差在外地，就用视频会议开内部会议。</p>
+<ul>
+<li>其实会议1秒延时无所谓，因为人家讲完话后，其他人需要思考。</li>
+<li>思考的延时也会在1秒左右。当然如果用视频会议吵架就不行。</li>
+</ul>
+</li>
+<li><p>其他：监控，直播也有些地方需要对延迟有要求。</p>
+<ul>
+<li>互联网上RTMP协议的延迟基本上能够满足要求。<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1></li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><a href="https://draveness.me/whys-the-design-live-streaming-latency/" target="_blank" rel="noopener">为什么流媒体直播的延迟很高</a></li>
+<li><a href="https://blog.csdn.net/lcalqf/article/details/52993630" target="_blank" rel="noopener">RTMP 延迟分析</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/73984438" target="_blank" rel="noopener">视频和视频帧：ffmpeg的RTMP推流</a></li>
+<li><a href="https://www.jianshu.com/p/c04d810b7562" target="_blank" rel="noopener">视频传输协议详解（RTMP、RTSP、HLS）</a></li>
+<li><a href="https://www.jianshu.com/p/5ce11c20a9df" target="_blank" rel="noopener">RTMP协议解析（一） —— 基本了解</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/27368329" target="_blank" rel="noopener">流媒体系统的RTMP协议</a></li>
+<li><a href="https://blog.csdn.net/dong_beijing/article/details/60776248" target="_blank" rel="noopener">通过信号量和共享内存实现h264码流在不同进程间传输</a></li>
+</ol>
 ]]></content>
       <categories>
-        <category>中间件</category>
-        <category>资源</category>
-        <category>阿里</category>
+        <category>协议</category>
+        <category>前端</category>
+        <category>视频</category>
+        <category>延迟</category>
       </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>视频</tag>
+        <tag>延迟</tag>
+        <tag>协议</tag>
+      </tags>
   </entry>
   <entry>
     <title>后端｜java面试</title>
@@ -1203,6 +1189,89 @@ Output: 3</code></p>
       <tags>
         <tag>算法</tag>
         <tag>大纲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>中间件策略</title>
+    <url>/2020/07/18/%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%AD%96%E7%95%A5/</url>
+    <content><![CDATA[<p>中间件策略</p>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><ul>
+<li><a href="http://jm.taobao.org/archives/page/46/" target="_blank" rel="noopener">淘宝中间件博客</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>中间件</category>
+        <category>资源</category>
+        <category>阿里</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>前端| javascript｜bind｜关于Bind</title>
+    <url>/2020/07/29/%E5%89%8D%E7%AB%AF%7C%20javascript%EF%BD%9Cbind%EF%BD%9C%E5%85%B3%E4%BA%8EBind/</url>
+    <content><![CDATA[<h1 id="关于Bind"><a href="#关于Bind" class="headerlink" title="关于Bind"></a>关于Bind</h1><p>#Goal<br>一点一点重写bind</p>
+<p>#一个非常简单的实现</p>
+<p>只有绑定this（指针），而没有参数。</p>
+<iframe height="265" style="width: 100%;" scrolling="no" title="FunctionBind1" src="https://codepen.io/weihong-xu/embed/preview/vYLoWEg?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/weihong-xu/pen/vYLoWEg" target="_blank" rel="noopener">FunctionBind1</a> by Weihong Xu
+  (<a href="https://codepen.io/weihong-xu" target="_blank" rel="noopener">@weihong-xu</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.
+</iframe>
+
+
+<p>#稍微复杂一点</p>
+<p>绑定了参数的bind</p>
+<iframe height="265" style="width: 100%;" scrolling="no" title="FunctionBind2" src="https://codepen.io/weihong-xu/embed/wvMVPzj?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/weihong-xu/pen/wvMVPzj" target="_blank" rel="noopener">FunctionBind2</a> by Weihong Xu
+  (<a href="https://codepen.io/weihong-xu" target="_blank" rel="noopener">@weihong-xu</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.
+</iframe>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>javascript</category>
+        <category>bind</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>javascript</tag>
+        <tag>bind</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端| React｜源代码｜React 源代码总结</title>
+    <url>/2020/07/29/%E5%89%8D%E7%AB%AF%7C%20React%EF%BD%9C%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BD%9CReact%20%E6%BA%90%E4%BB%A3%E7%A0%81%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1 id="源代码分析"><a href="#源代码分析" class="headerlink" title="源代码分析"></a>源代码分析</h1><h1 id="收集"><a href="#收集" class="headerlink" title="收集"></a>收集</h1><p><a href="https://medium.com/swlh/react-natives-re-architecture-in-2020-9bb82659792c" target="_blank" rel="noopener">1</a></p>
+<p><a href="https://medium.com/@christian.falch/https-medium-com-christian-falch-react-native-jsi-challenge-1201a69c8fbf" target="_blank" rel="noopener">2</a></p>
+<p><a href="https://github.com/react-native-community/discussions-and-proposals/issues/4" target="_blank" rel="noopener">3</a></p>
+<p><a href="http://blog.nparashuram.com/2019/01/react-natives-new-architecture-glossary.html" target="_blank" rel="noopener">4</a></p>
+<p><a href="https://www.youtube.com/watch?v=UcqRXTriUVI" target="_blank" rel="noopener">5</a></p>
+<p><a href="https://formidable.com/blog/2019/react-codegen-part-1/" target="_blank" rel="noopener">6</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>React</category>
+        <category>源代码</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>面试题</tag>
+        <tag>源代码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端| 面试题｜前端面试经验</title>
+    <url>/2020/07/21/%E5%89%8D%E7%AB%AF%7C%20%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BD%9C%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/</url>
+    <content><![CDATA[<h1 id="前端面试经验"><a href="#前端面试经验" class="headerlink" title="前端面试经验"></a>前端面试经验</h1><h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><ol>
+<li><a href="https://juejin.im/post/5eda38ebf265da7700281d57" target="_blank" rel="noopener">霖呆呆的中大厂面试记录及2年前端薪资对比</a></li>
+</ol>
+<h2 id="问题及解析"><a href="#问题及解析" class="headerlink" title="问题及解析"></a>问题及解析</h2><p>1. </p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>面试题</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>面试题</tag>
       </tags>
   </entry>
   <entry>
@@ -1372,6 +1441,49 @@ Output: 3</code></p>
       </tags>
   </entry>
   <entry>
+    <title>测试｜Google测试</title>
+    <url>/2020/07/13/%E6%B5%8B%E8%AF%95-google-%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<h1 id="Google测试"><a href="#Google测试" class="headerlink" title="Google测试"></a>Google测试</h1><p>##软件测试开发工程师</p>
+<ul>
+<li>职责：负责可测试性和测试自动化体系的长期有效性。<ul>
+<li>扮演<strong>质量顾问</strong>的角色</li>
+<li>在<strong>单元测试</strong>方面给予开发人员支持</li>
+<li>为开发人员提供<strong>测试框架</strong>，方便开发提高<em><strong><em>测试效率</em></strong></em></li>
+<li>参与设计评审、重构代码增加可测试性，编写<strong>单元测试框架</strong>和<strong>自动化测试框架</strong></li>
+<li>更加关注于质量提升和<strong>测试覆盖率(code coverage)</strong>的增加，SET写代码的目的是可以让SWE测试自己的功能</li>
+</ul>
+</li>
+</ul>
+<p>##测试工程师</p>
+<ul>
+<li>职责：评估对用户的影响以及软件产品整体目标上的风险<ul>
+<li>从用户的角度来思考质量方面各种问题</li>
+<li>从开发角度来看，他们编写用户使用场景方面的自动化用例代码</li>
+<li>从产品角度来看，他们评估整体测试覆盖度，并验证其他工程师角色在测试方面合作的有效性</li>
+<li>产品专家、质量顾问和风险分析师</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<h1 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h1><h2 id="postman"><a href="#postman" class="headerlink" title="postman"></a>postman</h2><ul>
+<li><a href="https://www.jianshu.com/p/77f4f9175028" target="_blank" rel="noopener">postman最详细的中文使用教程</a></li>
+</ul>
+<h2 id="性能测试工具"><a href="#性能测试工具" class="headerlink" title="性能测试工具"></a>性能测试工具</h2><ul>
+<li><a href="https://testerhome.com/topics/17068" target="_blank" rel="noopener">wrk,ab,locust,Jmeter 压测结果比较</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/71594831" target="_blank" rel="noopener">记一次使用NodeJS做服务器压力测试</a></li>
+<li><a href="https://juejin.im/post/5b827cbbe51d4538c021f2da" target="_blank" rel="noopener">对node工程进行压力测试与性能分析</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>测试</category>
+        <category>Google</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>Google</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端｜安全｜防止sql注入</title>
     <url>/2020/07/13/%E5%AE%89%E5%85%A8%E2%80%94javascript-%E9%98%B2%E6%AD%A2%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/</url>
     <content><![CDATA[<p>SQL注入攻击的总体思路</p>
@@ -1419,47 +1531,189 @@ Output: 3</code></p>
       </tags>
   </entry>
   <entry>
-    <title>测试｜Google测试</title>
-    <url>/2020/07/13/%E6%B5%8B%E8%AF%95-google-%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<h1 id="Google测试"><a href="#Google测试" class="headerlink" title="Google测试"></a>Google测试</h1><p>##软件测试开发工程师</p>
+    <title>性能 ｜ 缓存</title>
+    <url>/2020/07/12/%E7%BC%93%E5%AD%98/</url>
+    <content><![CDATA[<h1 id="1-性能优化角度"><a href="#1-性能优化角度" class="headerlink" title="1.性能优化角度"></a>1.性能优化角度</h1><p><a href="https://github.com/amandakelake/blog/issues/43" target="_blank" rel="noopener">来自</a><br>##缓存分类</p>
 <ul>
-<li>职责：负责可测试性和测试自动化体系的长期有效性。<ul>
-<li>扮演<strong>质量顾问</strong>的角色</li>
-<li>在<strong>单元测试</strong>方面给予开发人员支持</li>
-<li>为开发人员提供<strong>测试框架</strong>，方便开发提高<em><strong><em>测试效率</em></strong></em></li>
-<li>参与设计评审、重构代码增加可测试性，编写<strong>单元测试框架</strong>和<strong>自动化测试框架</strong></li>
-<li>更加关注于质量提升和<strong>测试覆盖率(code coverage)</strong>的增加，SET写代码的目的是可以让SWE测试自己的功能</li>
+<li>cookie:<ul>
+<li>好处：简明有效，少量不敏感数据</li>
+<li>缺点：4K， 不安全（暴露session）</li>
+</ul>
+</li>
+<li>Web Storage<ul>
+<li>对比：<ul>
+<li>好处：容量稍微大一点（5M），localStorage 可做持久化数据存储</li>
+<li>机制：事件通知机制 - 数据发送给监听者</li>
+<li>缺点： local data 被篡改； XSS攻击</li>
+</ul>
+</li>
+<li>注意：<ul>
+<li>读取到HTML 和 JS代码</li>
+<li>文件的版本： 更新控制会带来更多的代码层面的<strong>维护成本</strong></li>
+</ul>
+</li>
+<li>适合关键的业务数据 </li>
+</ul>
+</li>
+<li>indexDB：<ul>
+<li>结构化的、事务型的、高性能的NoSQL</li>
+<li>同步/异步API</li>
+</ul>
+</li>
+<li>PWA（Service Worker）：<ul>
+<li>替代 Application Cache（Manifest）  </li>
+<li>独立线程，后台运行</li>
+<li>三个限制：<ul>
+<li>不能访问DOM</li>
+<li>同步API 不能用</li>
+<li>需要HTTPS协议</li>
 </ul>
 </li>
 </ul>
-<p>##测试工程师</p>
-<ul>
-<li>职责：评估对用户的影响以及软件产品整体目标上的风险<ul>
-<li>从用户的角度来思考质量方面各种问题</li>
-<li>从开发角度来看，他们编写用户使用场景方面的自动化用例代码</li>
-<li>从产品角度来看，他们评估整体测试覆盖度，并验证其他工程师角色在测试方面合作的有效性</li>
-<li>产品专家、质量顾问和风险分析师</li>
+</li>
+<li>缓存实践提示：<ul>
+<li>配置超长时间的本地缓存 —— 节省带宽，提高性能</li>
+<li>精确缓存控制：采用内容摘要作为缓存更新依据</li>
+<li>优化网络请求：静态资源CDN部署</li>
+<li>平滑升级：资源发布路径实现非覆盖发布</li>
 </ul>
 </li>
-<li></li>
 </ul>
-<h1 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h1><h2 id="postman"><a href="#postman" class="headerlink" title="postman"></a>postman</h2><ul>
-<li><a href="https://www.jianshu.com/p/77f4f9175028" target="_blank" rel="noopener">postman最详细的中文使用教程</a></li>
+<h1 id="2-浏览器存储机制："><a href="#2-浏览器存储机制：" class="headerlink" title="2.浏览器存储机制："></a>2.浏览器存储机制：</h1><p><a href="https://github.com/amandakelake/blog/issues/41" target="_blank" rel="noopener">这里</a></p>
+<h2 id="强缓存，协商缓存"><a href="#强缓存，协商缓存" class="headerlink" title="强缓存，协商缓存"></a>强缓存，协商缓存</h2><ul>
+<li>浏览器加载 <ul>
+<li>-&gt; expires/cache-control <ul>
+<li>-&gt; 命中强缓存（找到）</li>
+<li>-&gt;  没有命中强缓存<ul>
+<li>-&gt; last-modified和etag 命中协商缓存 </li>
+<li>服务器会将这个请求返回</li>
 </ul>
-<h2 id="性能测试工具"><a href="#性能测试工具" class="headerlink" title="性能测试工具"></a>性能测试工具</h2><ul>
-<li><a href="https://testerhome.com/topics/17068" target="_blank" rel="noopener">wrk,ab,locust,Jmeter 压测结果比较</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/71594831" target="_blank" rel="noopener">记一次使用NodeJS做服务器压力测试</a></li>
-<li><a href="https://juejin.im/post/5b827cbbe51d4538c021f2da" target="_blank" rel="noopener">对node工程进行压力测试与性能分析</a></li>
+</li>
+</ul>
+</li>
+<li>否则，从服务器加载资源</li>
+</ul>
+</li>
+</ul>
+<h3 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h3><p>通过 Expire 和 Cache-Control 两种响应头实现</p>
+<ul>
+<li>Expire 是http1.0提出的一个表示资源过期的header<ul>
+<li>它描述的是一个绝对时间，由服务器返回<code>Cache-Control: max-age=315360000</code></li>
+<li>Cache-Control: <ul>
+<li>no-cache 缓存到local缓冲区</li>
+<li>no-store才是真正的不缓存数据到本地</li>
+<li>可以被所有用户缓存（共享），终端和CDN等中间代理服务器 </li>
+<li>private只能被终端浏览器缓存（而且是私有缓存）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h3><ul>
+<li><p>协商缓存命中</p>
+<ul>
+<li>请求响应返回的http状态为304</li>
+<li>显示一个Not Modified的字符串</li>
+</ul>
+</li>
+<li><p>对Header进行管理</p>
+<ul>
+<li>Last-Modified, If-Modified-Since</li>
+<li>ETag, If-None-Match</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>Last-Modified， If-Modified-Since<ul>
+<li>Last-Modified 表示本地最后修改日期。浏览器会在request hearder加上<code>Last-Modified</code>的值</li>
+<li>如果本地打开缓存文件，会造成修改 -&gt; HTTP/1.1 出现了ETag</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li>ETag, If-None-Match：<br>ETag 就像是一个指纹 资源变化会导致ETag变化，跟最后修改时间没关系，（Unicode）<ul>
+<li>If-None-Match的header会将上次返回的Etag发送给服务器，询问该资源的Etag是否有更新，有变动就会发送新的资源回来</li>
+</ul>
+</li>
+</ol>
+<h3 id="为什么用ETag："><a href="#为什么用ETag：" class="headerlink" title="为什么用ETag："></a>为什么用ETag：</h3><ol>
+<li>文件不改变，Last-Modified 在变动</li>
+<li>文件修改非常频繁（1sN次）</li>
+<li>服务器不能精确的到文件的最后修改时间</li>
+</ol>
+<h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h3><ul>
+<li>200: 强缓Expires/Cache-Control存失效时，返回新的资源文件</li>
+<li>200(from cache): 强缓Expires/Cache-Control两者都存在，未过期，Cache-Control优先Expires时，浏览器从本地获取资源成功</li>
+<li>304(Not Modified )：协商缓存Last-modified/Etag没有过期时，服务端返回状态码304</li>
+</ul>
+<h2 id="如何选择合适的缓存"><a href="#如何选择合适的缓存" class="headerlink" title="如何选择合适的缓存"></a>如何选择合适的缓存</h2><p>大致的顺序</p>
+<p>Cache-Control —— 请求服务器之前<br>Expires —— 请求服务器之前<br>If-None-Match (Etag) —— 请求服务器<br>If-Modified-Since (Last-Modified) —— 请求服务器</p>
+<p>#3.数据存储：</p>
+<h2 id="cookie、Storage-amp-indexedDB"><a href="#cookie、Storage-amp-indexedDB" class="headerlink" title="cookie、Storage&amp; indexedDB"></a>cookie、Storage&amp; indexedDB</h2><p>#4. 离线应用缓存：</p>
+<h2 id="App-Cache-gt-Manifest"><a href="#App-Cache-gt-Manifest" class="headerlink" title="App Cache =&gt; Manifest"></a>App Cache =&gt; Manifest</h2><h2 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h2><h2 id="页面缓存优化"><a href="#页面缓存优化" class="headerlink" title="页面缓存优化"></a>页面缓存优化</h2><ul>
+<li><a href="https://segmentfault.com/a/1190000020867090" target="_blank" rel="noopener">前端性能优化指南</a></li>
+<li><a href="https://juejin.im/post/5e61a84f518825494822d21c#heading-2" target="_blank" rel="noopener">商城秒杀系统优化方案</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/93163523" target="_blank" rel="noopener">浏览器缓存的这些知识</a></li>
+<li><a href="https://www.cnblogs.com/cckui/p/11506514.html" target="_blank" rel="noopener">HTTP 强制缓存和协商缓存</a></li>
+<li><a href="https://juejin.im/post/5b0bff30f265da08f76cc6f0" target="_blank" rel="noopener">前端性能优化–从 10 多秒到 1.05 秒</a></li>
+<li><a href="https://juejin.im/post/5a966bd16fb9a0635172a50a" target="_blank" rel="noopener">2018 前端性能优化清单</a></li>
 </ul>
 ]]></content>
       <categories>
-        <category>测试</category>
-        <category>Google</category>
+        <category>性能</category>
+        <category>缓存</category>
       </categories>
       <tags>
-        <tag>测试</tag>
-        <tag>Google</tag>
+        <tag>性能</tag>
+        <tag>缓存</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>面试｜系统设计｜ 大纲</title>
+    <url>/2020/07/19/%E9%9D%A2%E8%AF%95%EF%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%EF%BD%9C%E5%A4%A7%E7%BA%B2%20/</url>
+    <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="美国"><a href="#美国" class="headerlink" title="美国"></a>美国</h2><p><a href="https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=169343&extra=page%3D1%26filter%3Dtypeid%26typeid%3D1025%26typeid%3D1025" target="_blank" rel="noopener">From</a></p>
+<p>所谓的system design是要做一个能够在现实世界中运行的系统的设计，所以说system design可以cover任何topic，从建大桥到做手机到做网站，而局限到软件，尤其是面试的scenario，大体局限于以下几种：</p>
+<ol>
+<li>Web application，典型例子：设计一个e-commerce商品的detail page(参考Amazon商品detail page)。设计一个online小游戏。设计一个论坛。</li>
+<li>简单的Web Service，典型例子：设计一个short url service。</li>
+<li>实时／半实时的消息update，典型例子：messenger，news feed。</li>
+<li>数据系统，典型例子：top url hits, unique url hits</li>
+<li>内容分发系统，典型例子：设计Netflix CDN</li>
+<li>专业知识，典型例子：推荐系统，分布式系统基础架构，搜索。。。</li>
+</ol>
+<p>个人认为，要想在System Design上面达到像刷题那样的熟练程度，对于刚刚入行一两年甚至三四年的朋友来说，是不可能的，因为这些问题要想准确答出，已经远远超出了对junior engineer的要求，甚至已经是senior engineer的水准。</p>
+<p>但是即使面试官并没有期望你达到senior engineer的水准，至少他还是想要通过这个问题来摸清你的工程经验，如果所答完全非所问，那么给面试官留下的印象将是非常糟糕的。你的方案可以不是最优的，甚至可能离最优有一段距离，但是你的方案一定不能是ridiculous的。起码在小的scale上要能有可行性，可以展现你的一些基本design sense。</p>
+<p>基础知识的准备：</p>
+<ol>
+<li>数据库 —— 了解relational数据库(Oracle/postgres)的基本知识，了解数据库的partition，了解查询，了解数据库的replication；了解现在流行的NoSQL databases: key-value database (Riak/DynamoDB)，document based(mongodb)，graph based, big table(or column based - HBase)…这里DynamoDB有个paper，关于eventually consistence需要明白CAP定理。</li>
+<li>队列服务—— 了解Kafka或者Kinesis，明白队列服务的应用场景</li>
+<li>Web层，了解MVC，具体技术可以了解Spring，Nodejs</li>
+<li>前端，了解Javascript，Html</li>
+<li>了解SOAP和RESTful</li>
+<li>理解cache——如何以及在何种情况下运用cache降低latency</li>
+<li>理解现代分布式系统需要大量monitor以及log analysis</li>
+<li>理解系统中不能有single point of failure，从failure的角度出发设计系统，运用Write Ahead Log进行故障恢复，充分replicate你的service所以任何一个机器、集群、机房的灾难都不会对你的整体服务造成不可挽回的影响</li>
+<li>处理高并发，明白资源共享是影响并发的主要原因之一（另一个原因是进程间通信）——如何decouple共享资源，提高并发效率</li>
+<li>明白基本的效率评定标准，如TPS。。。</li>
+<li>理解一些分布式系统的基本概念，如上面提到的CAP，以及Consistent Hashing，Vector Clock</li>
+<li>读一些paper，如Akamai的CDN，Amazon的Dynamo，Google的Map-reduce（很老嗯）等等</li>
+<li>亲手实现一个简单的网站，从前端到数据库都接触一些</li>
+<li>了解Hadoop的基本功能，如HDFS，Map-Reduce。</li>
+<li>了解Apache Storm的基本功能。</li>
+<li>结合所学的基础知识，考虑你所设计的系统的Availability，Scalability和Performance.</li>
+</ol>
+<h2 id="国内"><a href="#国内" class="headerlink" title="国内"></a>国内</h2><p>此时我们已经知道面试官到底想要通过系统设计题考察我们什么，我们也就知道在大的方面，该要怎么应对面试：</p>
+<p>加强知识深度：知识深度不仅仅在系统设计题中体现，包括此前的技术面试题都会考察<br>加强知识广度：了解常见工具的特性和什么场景适合，例如MySQL/PG、Redis。了解常见的业务场景特点，例如：论坛一般来说都是读多写少，而日志服务则是写多读少。</p>
+<p><img src="/2020/07/19/%E9%9D%A2%E8%AF%95%EF%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%EF%BD%9C%E5%A4%A7%E7%BA%B2%20/WebDesign.png" alt></p>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><ol>
+<li><a href="https://medium.com/@NetflixTechBlog" target="_blank" rel="noopener">medium NetflixTechBlog</a></li>
+<li><a href="https://jiajunhuang.com/articles/2019_04_29-system_design.md.html" target="_blank" rel="noopener">搞定面试中的系统设计题</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>面试</category>
+        <category>系统设计</category>
+      </categories>
   </entry>
   <entry>
     <title>测试｜面试题</title>
@@ -1704,144 +1958,6 @@ Output: 3</code></p>
       </tags>
   </entry>
   <entry>
-    <title>性能 ｜ 缓存</title>
-    <url>/2020/07/12/%E7%BC%93%E5%AD%98/</url>
-    <content><![CDATA[<h1 id="1-性能优化角度"><a href="#1-性能优化角度" class="headerlink" title="1.性能优化角度"></a>1.性能优化角度</h1><p><a href="https://github.com/amandakelake/blog/issues/43" target="_blank" rel="noopener">来自</a><br>##缓存分类</p>
-<ul>
-<li>cookie:<ul>
-<li>好处：简明有效，少量不敏感数据</li>
-<li>缺点：4K， 不安全（暴露session）</li>
-</ul>
-</li>
-<li>Web Storage<ul>
-<li>对比：<ul>
-<li>好处：容量稍微大一点（5M），localStorage 可做持久化数据存储</li>
-<li>机制：事件通知机制 - 数据发送给监听者</li>
-<li>缺点： local data 被篡改； XSS攻击</li>
-</ul>
-</li>
-<li>注意：<ul>
-<li>读取到HTML 和 JS代码</li>
-<li>文件的版本： 更新控制会带来更多的代码层面的<strong>维护成本</strong></li>
-</ul>
-</li>
-<li>适合关键的业务数据 </li>
-</ul>
-</li>
-<li>indexDB：<ul>
-<li>结构化的、事务型的、高性能的NoSQL</li>
-<li>同步/异步API</li>
-</ul>
-</li>
-<li>PWA（Service Worker）：<ul>
-<li>替代 Application Cache（Manifest）  </li>
-<li>独立线程，后台运行</li>
-<li>三个限制：<ul>
-<li>不能访问DOM</li>
-<li>同步API 不能用</li>
-<li>需要HTTPS协议</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>缓存实践提示：<ul>
-<li>配置超长时间的本地缓存 —— 节省带宽，提高性能</li>
-<li>精确缓存控制：采用内容摘要作为缓存更新依据</li>
-<li>优化网络请求：静态资源CDN部署</li>
-<li>平滑升级：资源发布路径实现非覆盖发布</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-浏览器存储机制："><a href="#2-浏览器存储机制：" class="headerlink" title="2.浏览器存储机制："></a>2.浏览器存储机制：</h1><p><a href="https://github.com/amandakelake/blog/issues/41" target="_blank" rel="noopener">这里</a></p>
-<h2 id="强缓存，协商缓存"><a href="#强缓存，协商缓存" class="headerlink" title="强缓存，协商缓存"></a>强缓存，协商缓存</h2><ul>
-<li>浏览器加载 <ul>
-<li>-&gt; expires/cache-control <ul>
-<li>-&gt; 命中强缓存（找到）</li>
-<li>-&gt;  没有命中强缓存<ul>
-<li>-&gt; last-modified和etag 命中协商缓存 </li>
-<li>服务器会将这个请求返回</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>否则，从服务器加载资源</li>
-</ul>
-</li>
-</ul>
-<h3 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h3><p>通过 Expire 和 Cache-Control 两种响应头实现</p>
-<ul>
-<li>Expire 是http1.0提出的一个表示资源过期的header<ul>
-<li>它描述的是一个绝对时间，由服务器返回<code>Cache-Control: max-age=315360000</code></li>
-<li>Cache-Control: <ul>
-<li>no-cache 缓存到local缓冲区</li>
-<li>no-store才是真正的不缓存数据到本地</li>
-<li>可以被所有用户缓存（共享），终端和CDN等中间代理服务器 </li>
-<li>private只能被终端浏览器缓存（而且是私有缓存）</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h3><ul>
-<li><p>协商缓存命中</p>
-<ul>
-<li>请求响应返回的http状态为304</li>
-<li>显示一个Not Modified的字符串</li>
-</ul>
-</li>
-<li><p>对Header进行管理</p>
-<ul>
-<li>Last-Modified, If-Modified-Since</li>
-<li>ETag, If-None-Match</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>Last-Modified， If-Modified-Since<ul>
-<li>Last-Modified 表示本地最后修改日期。浏览器会在request hearder加上<code>Last-Modified</code>的值</li>
-<li>如果本地打开缓存文件，会造成修改 -&gt; HTTP/1.1 出现了ETag</li>
-</ul>
-</li>
-</ol>
-<ol start="2">
-<li>ETag, If-None-Match：<br>ETag 就像是一个指纹 资源变化会导致ETag变化，跟最后修改时间没关系，（Unicode）<ul>
-<li>If-None-Match的header会将上次返回的Etag发送给服务器，询问该资源的Etag是否有更新，有变动就会发送新的资源回来</li>
-</ul>
-</li>
-</ol>
-<h3 id="为什么用ETag："><a href="#为什么用ETag：" class="headerlink" title="为什么用ETag："></a>为什么用ETag：</h3><ol>
-<li>文件不改变，Last-Modified 在变动</li>
-<li>文件修改非常频繁（1sN次）</li>
-<li>服务器不能精确的到文件的最后修改时间</li>
-</ol>
-<h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h3><ul>
-<li>200: 强缓Expires/Cache-Control存失效时，返回新的资源文件</li>
-<li>200(from cache): 强缓Expires/Cache-Control两者都存在，未过期，Cache-Control优先Expires时，浏览器从本地获取资源成功</li>
-<li>304(Not Modified )：协商缓存Last-modified/Etag没有过期时，服务端返回状态码304</li>
-</ul>
-<h2 id="如何选择合适的缓存"><a href="#如何选择合适的缓存" class="headerlink" title="如何选择合适的缓存"></a>如何选择合适的缓存</h2><p>大致的顺序</p>
-<p>Cache-Control —— 请求服务器之前<br>Expires —— 请求服务器之前<br>If-None-Match (Etag) —— 请求服务器<br>If-Modified-Since (Last-Modified) —— 请求服务器</p>
-<p>#3.数据存储：</p>
-<h2 id="cookie、Storage-amp-indexedDB"><a href="#cookie、Storage-amp-indexedDB" class="headerlink" title="cookie、Storage&amp; indexedDB"></a>cookie、Storage&amp; indexedDB</h2><p>#4. 离线应用缓存：</p>
-<h2 id="App-Cache-gt-Manifest"><a href="#App-Cache-gt-Manifest" class="headerlink" title="App Cache =&gt; Manifest"></a>App Cache =&gt; Manifest</h2><h2 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h2><h2 id="页面缓存优化"><a href="#页面缓存优化" class="headerlink" title="页面缓存优化"></a>页面缓存优化</h2><ul>
-<li><a href="https://segmentfault.com/a/1190000020867090" target="_blank" rel="noopener">前端性能优化指南</a></li>
-<li><a href="https://juejin.im/post/5e61a84f518825494822d21c#heading-2" target="_blank" rel="noopener">商城秒杀系统优化方案</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/93163523" target="_blank" rel="noopener">浏览器缓存的这些知识</a></li>
-<li><a href="https://www.cnblogs.com/cckui/p/11506514.html" target="_blank" rel="noopener">HTTP 强制缓存和协商缓存</a></li>
-<li><a href="https://juejin.im/post/5b0bff30f265da08f76cc6f0" target="_blank" rel="noopener">前端性能优化–从 10 多秒到 1.05 秒</a></li>
-<li><a href="https://juejin.im/post/5a966bd16fb9a0635172a50a" target="_blank" rel="noopener">2018 前端性能优化清单</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>性能</category>
-        <category>缓存</category>
-      </categories>
-      <tags>
-        <tag>性能</tag>
-        <tag>缓存</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>面试｜项目介绍</title>
     <url>/2020/07/12/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/</url>
     <content><![CDATA[<h1 id="Baidu"><a href="#Baidu" class="headerlink" title="Baidu"></a>Baidu</h1><h2 id="项目点"><a href="#项目点" class="headerlink" title="项目点"></a>项目点</h2><ul>
@@ -1934,50 +2050,42 @@ end</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>面试｜系统设计｜ 大纲</title>
-    <url>/2020/07/19/%E9%9D%A2%E8%AF%95%EF%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%EF%BD%9C%E5%A4%A7%E7%BA%B2%20/</url>
-    <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="美国"><a href="#美国" class="headerlink" title="美国"></a>美国</h2><p><a href="https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=169343&extra=page%3D1%26filter%3Dtypeid%26typeid%3D1025%26typeid%3D1025" target="_blank" rel="noopener">From</a></p>
-<p>所谓的system design是要做一个能够在现实世界中运行的系统的设计，所以说system design可以cover任何topic，从建大桥到做手机到做网站，而局限到软件，尤其是面试的scenario，大体局限于以下几种：</p>
-<ol>
-<li>Web application，典型例子：设计一个e-commerce商品的detail page(参考Amazon商品detail page)。设计一个online小游戏。设计一个论坛。</li>
-<li>简单的Web Service，典型例子：设计一个short url service。</li>
-<li>实时／半实时的消息update，典型例子：messenger，news feed。</li>
-<li>数据系统，典型例子：top url hits, unique url hits</li>
-<li>内容分发系统，典型例子：设计Netflix CDN</li>
-<li>专业知识，典型例子：推荐系统，分布式系统基础架构，搜索。。。</li>
+    <title>前端|Javascript｜数组｜活用数组</title>
+    <url>/2020/07/28/%E5%89%8D%E7%AB%AF%7CJavascript%EF%BD%9C%E6%95%B0%E7%BB%84%EF%BD%9C%E6%B4%BB%E7%94%A8%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<h1 id="Javascript中数组的用法"><a href="#Javascript中数组的用法" class="headerlink" title="Javascript中数组的用法"></a>Javascript中数组的用法</h1><h2 id="改写递归的方法"><a href="#改写递归的方法" class="headerlink" title="改写递归的方法"></a>改写递归的方法</h2><h3 id="Reduce-妙用"><a href="#Reduce-妙用" class="headerlink" title="Reduce 妙用"></a>Reduce 妙用</h3><p>Reduce举例<br>先上一个例子 : 实现数组 arr = [1,2,3,4] 求数组的和</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">pre,cur</span>)</span>&#123;<span class="keyword">return</span> pre + cur&#125;); <span class="comment">// return 10</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码是源于</p>
+ <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">array.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">accumulator, arrayElement, currentIndex, arr</span>), <span class="title">initialValue</span>)</span></span><br><span class="line"><span class="function">//<span class="title">initialValue</span> 初始值 </span></span><br><span class="line"><span class="function">//<span class="title">function</span></span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Javascript</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>Javascript</tag>
+        <tag>“数组”</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端| React ｜优化｜React优化</title>
+    <url>/2020/07/28/%E5%89%8D%E7%AB%AF%7C%20React%20%EF%BD%9C%E4%BC%98%E5%8C%96%EF%BD%9CReact%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<h1 id="React优化"><a href="#React优化" class="headerlink" title="React优化"></a>React优化</h1><ol>
+<li><a href="https://www.youtube.com/watch?v=Go3BseQ1VZQ" target="_blank" rel="noopener">视频</a></li>
+<li><a href="https://github.com/yanyue404/blog/issues/50" target="_blank" rel="noopener">文章</a><br>3</li>
 </ol>
-<p>个人认为，要想在System Design上面达到像刷题那样的熟练程度，对于刚刚入行一两年甚至三四年的朋友来说，是不可能的，因为这些问题要想准确答出，已经远远超出了对junior engineer的要求，甚至已经是senior engineer的水准。</p>
-<p>但是即使面试官并没有期望你达到senior engineer的水准，至少他还是想要通过这个问题来摸清你的工程经验，如果所答完全非所问，那么给面试官留下的印象将是非常糟糕的。你的方案可以不是最优的，甚至可能离最优有一段距离，但是你的方案一定不能是ridiculous的。起码在小的scale上要能有可行性，可以展现你的一些基本design sense。</p>
-<p>基础知识的准备：</p>
-<ol>
-<li>数据库 —— 了解relational数据库(Oracle/postgres)的基本知识，了解数据库的partition，了解查询，了解数据库的replication；了解现在流行的NoSQL databases: key-value database (Riak/DynamoDB)，document based(mongodb)，graph based, big table(or column based - HBase)…这里DynamoDB有个paper，关于eventually consistence需要明白CAP定理。</li>
-<li>队列服务—— 了解Kafka或者Kinesis，明白队列服务的应用场景</li>
-<li>Web层，了解MVC，具体技术可以了解Spring，Nodejs</li>
-<li>前端，了解Javascript，Html</li>
-<li>了解SOAP和RESTful</li>
-<li>理解cache——如何以及在何种情况下运用cache降低latency</li>
-<li>理解现代分布式系统需要大量monitor以及log analysis</li>
-<li>理解系统中不能有single point of failure，从failure的角度出发设计系统，运用Write Ahead Log进行故障恢复，充分replicate你的service所以任何一个机器、集群、机房的灾难都不会对你的整体服务造成不可挽回的影响</li>
-<li>处理高并发，明白资源共享是影响并发的主要原因之一（另一个原因是进程间通信）——如何decouple共享资源，提高并发效率</li>
-<li>明白基本的效率评定标准，如TPS。。。</li>
-<li>理解一些分布式系统的基本概念，如上面提到的CAP，以及Consistent Hashing，Vector Clock</li>
-<li>读一些paper，如Akamai的CDN，Amazon的Dynamo，Google的Map-reduce（很老嗯）等等</li>
-<li>亲手实现一个简单的网站，从前端到数据库都接触一些</li>
-<li>了解Hadoop的基本功能，如HDFS，Map-Reduce。</li>
-<li>了解Apache Storm的基本功能。</li>
-<li>结合所学的基础知识，考虑你所设计的系统的Availability，Scalability和Performance.</li>
-</ol>
-<h2 id="国内"><a href="#国内" class="headerlink" title="国内"></a>国内</h2><p>此时我们已经知道面试官到底想要通过系统设计题考察我们什么，我们也就知道在大的方面，该要怎么应对面试：</p>
-<p>加强知识深度：知识深度不仅仅在系统设计题中体现，包括此前的技术面试题都会考察<br>加强知识广度：了解常见工具的特性和什么场景适合，例如MySQL/PG、Redis。了解常见的业务场景特点，例如：论坛一般来说都是读多写少，而日志服务则是写多读少。</p>
-<p><img src="/2020/07/19/%E9%9D%A2%E8%AF%95%EF%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%EF%BD%9C%E5%A4%A7%E7%BA%B2%20/WebDesign.png" alt></p>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><ol>
-<li><a href="https://medium.com/@NetflixTechBlog" target="_blank" rel="noopener">medium NetflixTechBlog</a></li>
-<li><a href="https://jiajunhuang.com/articles/2019_04_29-system_design.md.html" target="_blank" rel="noopener">搞定面试中的系统设计题</a></li>
-</ol>
+<h1 id="启发点"><a href="#启发点" class="headerlink" title="启发点"></a>启发点</h1><h1 id="代码实践"><a href="#代码实践" class="headerlink" title="代码实践"></a>代码实践</h1><p><img src="/2020/07/28/%E5%89%8D%E7%AB%AF|%20React%20%EF%BD%9C%E4%BC%98%E5%8C%96%EF%BD%9CReact%E4%BC%98%E5%8C%96/jpeg;base64,LS0tCnRpdGxlOiDliY3nq698IFJlYWN0IO+9nOS8mOWMlu+9nFJlYWN05LyY5YyWCmRhdGU6IDIwMjAtMDctMjggMTY6MjU6NTcKY2F0ZWdvcmllczogCi0gW+WJjeerr10KLSBbUmVhY3RdCi0gW+S8mOWMll0KdGFnOiBbIuWJjeerryIsICJSZWFjdCLvvIwg4oCc5LyY5YyW4oCdXQotLS0KCiMgUmVhY3TkvJjljJYKMS4gW+inhumikV0oaHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1HbzNCc2VRMVZaUSkKMi4gW+aWh+eroF0oaHR0cHM6Ly9naXRodWIuY29tL3lhbnl1ZTQwNC9ibG9nL2lzc3Vlcy81MCkKMwoKIyDlkK/lj5HngrkKCiMg5Luj56CB5a6e6Le1Cg==" alt></p>
 ]]></content>
       <categories>
-        <category>面试</category>
-        <category>系统设计</category>
+        <category>前端</category>
+        <category>React</category>
+        <category>优化</category>
       </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>React</tag>
+        <tag>“优化”</tag>
+      </tags>
   </entry>
 </search>
