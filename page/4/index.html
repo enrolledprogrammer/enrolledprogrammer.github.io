@@ -170,6 +170,112 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|SlipWindow|3_Longest_Substring_Without_Repeating_Characters/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Weihong Xu">
+      <meta itemprop="description" content="大前端成长之路">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/14/LeetCode%7CSlipWindow%7C3_Longest_Substring_Without_Repeating_Characters/" class="post-title-link" itemprop="url">LeetCode| Slip_Window| 3_Longest_Substring_Without_Repeating_Characters</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-14 12:12:57" itemprop="dateCreated datePublished" datetime="2020-07-14T12:12:57+08:00">2020-07-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-19 03:50:41" itemprop="dateModified" datetime="2020-07-19T03:50:41+08:00">2020-07-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">LeetCode刷题</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Slip-Window/" itemprop="url" rel="index"><span itemprop="name">Slip_Window</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/String/" itemprop="url" rel="index"><span itemprop="name">String</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>Given a string, find the length of the longest substring without repeating characters.</p>
+<p>Example 1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;abcabcbb&quot;</span><br><span class="line">Output: 3 </span><br><span class="line">Explanation: The answer is &quot;abc&quot;, with the length of 3.</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;bbbbb&quot;</span><br><span class="line">Output: 1</span><br><span class="line">Explanation: The answer is &quot;b&quot;, with the length of 1.</span><br></pre></td></tr></table></figure>
+
+<p>Example 3:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;pwwkew&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: The answer is &quot;wke&quot;, with the length of 3. </span><br><span class="line">             Note that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.</span><br></pre></td></tr></table></figure>
+
+<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><h3 id="HashTable-amp-keeping-track"><a href="#HashTable-amp-keeping-track" class="headerlink" title="HashTable &amp; keeping track"></a>HashTable &amp; keeping track</h3><p>Runs at Time: O(n) and Space: O(min(n + m)) </p>
+<p>这题是比较典型的滑动窗口问题，定义一个左边界 left 和一个右边界 right，形成一个窗口，并且在这个窗口中保证不出现重复的字符串。</p>
+<p>这需要用到一个新的变量 freqMap，用来记录窗口中的字母出现的频率数。在此基础上，先尝试取窗口的右边界再右边一个位置的值，也就是 str[right + 1]，然后拿这个值去 freqMap 中查找：</p>
+<p>这个值没有出现过，那就直接把 right ++，扩大窗口右边界。<br>如果这个值出现过，那么把 left ++，缩进左边界，并且记得把 str[left] 位置的值在 freqMap 中减掉。<br>循环条件是 left &lt; str.length，允许左边界一直滑动到字符串的右界。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> <span class="variable">s</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">let</span> lengthOfLongestSubstring = <span class="function"><span class="keyword">function</span> (<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> n = str.length</span><br><span class="line">  <span class="comment">// 滑动窗口为s[left...right]</span></span><br><span class="line">  <span class="keyword">let</span> left = <span class="number">0</span></span><br><span class="line">  <span class="keyword">let</span> right = <span class="number">-1</span></span><br><span class="line">  <span class="keyword">let</span> freqMap = &#123;&#125; <span class="comment">// 记录当前子串中下标对应的出现频率</span></span><br><span class="line">  <span class="keyword">let</span> max = <span class="number">0</span> <span class="comment">// 找到的满足条件子串的最长长度</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (left &lt; n) &#123;</span><br><span class="line">    <span class="keyword">let</span> nextLetter = str[right + <span class="number">1</span>]</span><br><span class="line">    <span class="keyword">if</span> (!freqMap[nextLetter] &amp;&amp; nextLetter !== <span class="literal">undefined</span>) &#123;</span><br><span class="line">      freqMap[nextLetter] = <span class="number">1</span></span><br><span class="line">      right++</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      freqMap[str[left]] = <span class="number">0</span></span><br><span class="line">      left++</span><br><span class="line">    &#125;</span><br><span class="line">    max = <span class="built_in">Math</span>.max(max, right - left + <span class="number">1</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> max</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Hi this is a really elegant solution using hash table and keeping track, when was the last time we saw a certain character. While the characters are not repeating we are updating the longest variable, once we get to repeating we update the start_idx from which we start trimming the original string</p>
+<p>Runs at Time: O(n) and Space: O(min(n + m)) where n is the number of characters in a string and m is the number of characters in alphabet of string. If every single character of an alphabet is included, we will end up using them all, and if not then we gonna at most use n characters, so min of those to makes sanse</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> lengthOfLongestSubstring = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!s)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> map = &#123;&#125;;</span><br><span class="line">    <span class="keyword">let</span> start = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> max = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; s.length; i++)&#123;</span><br><span class="line">        <span class="keyword">const</span> c = s.charAt(i);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(map[c] !== <span class="literal">undefined</span> &amp;&amp; map[c] &gt;= start)&#123;</span><br><span class="line">            max = <span class="built_in">Math</span>.max(max, i - start);</span><br><span class="line">            start = map[c] + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        map[c] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    max = <span class="built_in">Math</span>.max(max, s.length - start)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> max</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="JS-function"><a href="#JS-function" class="headerlink" title="JS function"></a>JS function</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> lengthOfLongestSubstring = <span class="function"><span class="params">s</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// keeps track of the most recent index of each letter.</span></span><br><span class="line">    <span class="keyword">const</span> map = &#123;&#125;;</span><br><span class="line">    <span class="comment">// keeps track of the starting index of the current substring.</span></span><br><span class="line">    <span class="keyword">var</span> left = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> s.split(<span class="string">''</span>).reduce(<span class="function">(<span class="params">max, v, i</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// starting index of substring is 1 + (the last index of this letter) to ensure this letter is not counted twice.</span></span><br><span class="line">        left = map[v] &gt;= left ? map[v] + <span class="number">1</span> : left;</span><br><span class="line">        <span class="comment">// updates last recorded index of letter to the most recent index.</span></span><br><span class="line">        map[v] = i;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// indices of current substring is (idx - leftIdx, idx).</span></span><br><span class="line">        <span class="comment">// +1 because if your substring starts and ends at index 0, it still has a length of 1.</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.max(max, i - left + <span class="number">1</span>);</span><br><span class="line">    &#125;, <span class="number">0</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|String|20_ValidParentheses/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -366,95 +472,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|stack|56%20-%20Merge%20Intervals/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Weihong Xu">
-      <meta itemprop="description" content="大前端成长之路">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/14/LeetCode%7Cstack%7C56%20-%20Merge%20Intervals/" class="post-title-link" itemprop="url">LeetCode|stack|56 Merge Intervals</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-14 12:12:57" itemprop="dateCreated datePublished" datetime="2020-07-14T12:12:57+08:00">2020-07-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-19 03:38:33" itemprop="dateModified" datetime="2020-07-19T03:38:33+08:00">2020-07-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LeetCode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">LeetCode刷题</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%8C%E5%A0%86/" itemprop="url" rel="index"><span itemprop="name">数据结构，堆</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a><a href="https://leetcode.com/problems/merge-intervals/" target="_blank" rel="noopener">题目</a></h1><p>Given a collection of intervals, merge all overlapping intervals.</p>
-<p>Example 1:</p>
-<blockquote>
-<p>Input: [[1,3],[2,6],[8,10],[15,18]]<br>Output: [[1,6],[8,10],[15,18]]<br>Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].</p>
-</blockquote>
-<p>Example 2:</p>
-<blockquote>
-<p>Input: [[1,4],[4,5]]<br>Output: [[1,5]]<br>Explanation: Intervals [1,4] and [4,5] are considered overlapping.</p>
-</blockquote>
-<p>NOTE: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.</p>
-<h1 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h1><h2 id="js默认sort"><a href="#js默认sort" class="headerlink" title="js默认sort"></a>js默认sort</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[][]&#125;</span> <span class="variable">intervals</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number[][]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> merge = <span class="function"><span class="keyword">function</span>(<span class="params">intervals</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (intervals.length == <span class="number">0</span>) <span class="keyword">return</span> [];</span><br><span class="line">    </span><br><span class="line">    intervals.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> b[<span class="number">0</span>] - a[<span class="number">0</span>]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">const</span> res = [intervals.pop()];</span><br><span class="line">    </span><br><span class="line">     <span class="keyword">while</span> (intervals.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> [a, b] = res[res.length - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">const</span> [c, d] = intervals.pop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(b &gt;= c)&#123;</span><br><span class="line">            <span class="keyword">const</span> start = <span class="built_in">Math</span>.min(a, c);</span><br><span class="line">            <span class="keyword">const</span> end = <span class="built_in">Math</span>.max(b, d);</span><br><span class="line">            </span><br><span class="line">            res[res.length - <span class="number">1</span>][<span class="number">0</span>] = start;</span><br><span class="line">            res[res.length - <span class="number">1</span>][<span class="number">1</span>] = end;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            res.push([c, d])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|Tree|617_Merge_Tree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -526,6 +543,95 @@
 <h2 id="非递归-迭代）"><a href="#非递归-迭代）" class="headerlink" title="非递归(迭代）"></a>非递归(迭代）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;迭代算法：</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; 1.创建一个堆栈</span><br><span class="line">&#x2F;&#x2F; 2.将两棵树的根节点推入堆栈。</span><br><span class="line">&#x2F;&#x2F; 3.当堆栈不为空时，执行以下步骤：</span><br><span class="line">	&#x2F;&#x2F; 1.从堆栈顶部弹出一个节点对</span><br><span class="line">	&#x2F;&#x2F; 2.对于每个删除的节点对，添加与两个节点对应的值，并更新第一棵树中相应节点的值</span><br><span class="line">	&#x2F;&#x2F; 3.如果第一棵树的左子节点存在，则将两棵树的左子节点（对）推入堆栈。</span><br><span class="line">	&#x2F;&#x2F; 4.如果第一棵树的左子节点不存在，则将第二棵树的左子节点附加到第一棵树的当前节点</span><br><span class="line">	&#x2F;&#x2F; 5.对正确的子对也执行相同的操作。</span><br><span class="line">	&#x2F;&#x2F; 6.如果当前两个节点均为NULL，则继续从堆栈中弹出下一个节点。</span><br><span class="line">&#x2F;&#x2F;4. 返回</span><br></pre></td></tr></table></figure>
 <p>迭代算法</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mergeTrees = <span class="function">(<span class="params">t1, t2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (t1 === <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> t2;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> stack = [];</span><br><span class="line">  stack.push([t1, t2]);</span><br><span class="line">  <span class="keyword">while</span> (stack.length !== <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> t = stack.pop();</span><br><span class="line">    <span class="keyword">if</span> (t[<span class="number">0</span>] === <span class="literal">null</span> || t[<span class="number">1</span>] === <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    t[<span class="number">0</span>].val += t[<span class="number">1</span>].val;</span><br><span class="line">    <span class="keyword">if</span> (t[<span class="number">0</span>].left === <span class="literal">null</span>) &#123;</span><br><span class="line">      t[<span class="number">0</span>].left = t[<span class="number">1</span>].left;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      stack.push([t[<span class="number">0</span>].left, t[<span class="number">1</span>].left]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (t[<span class="number">0</span>].right === <span class="literal">null</span>) &#123;</span><br><span class="line">      t[<span class="number">0</span>].right = t[<span class="number">1</span>].right;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      stack.push([t[<span class="number">0</span>].right, t[<span class="number">1</span>].right]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> t1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|stack|56%20-%20Merge%20Intervals/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Weihong Xu">
+      <meta itemprop="description" content="大前端成长之路">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/14/LeetCode%7Cstack%7C56%20-%20Merge%20Intervals/" class="post-title-link" itemprop="url">LeetCode|stack|56 Merge Intervals</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-14 12:12:57" itemprop="dateCreated datePublished" datetime="2020-07-14T12:12:57+08:00">2020-07-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-19 03:38:33" itemprop="dateModified" datetime="2020-07-19T03:38:33+08:00">2020-07-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">LeetCode刷题</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%8C%E5%A0%86/" itemprop="url" rel="index"><span itemprop="name">数据结构，堆</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a><a href="https://leetcode.com/problems/merge-intervals/" target="_blank" rel="noopener">题目</a></h1><p>Given a collection of intervals, merge all overlapping intervals.</p>
+<p>Example 1:</p>
+<blockquote>
+<p>Input: [[1,3],[2,6],[8,10],[15,18]]<br>Output: [[1,6],[8,10],[15,18]]<br>Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].</p>
+</blockquote>
+<p>Example 2:</p>
+<blockquote>
+<p>Input: [[1,4],[4,5]]<br>Output: [[1,5]]<br>Explanation: Intervals [1,4] and [4,5] are considered overlapping.</p>
+</blockquote>
+<p>NOTE: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.</p>
+<h1 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h1><h2 id="js默认sort"><a href="#js默认sort" class="headerlink" title="js默认sort"></a>js默认sort</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[][]&#125;</span> <span class="variable">intervals</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number[][]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> merge = <span class="function"><span class="keyword">function</span>(<span class="params">intervals</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (intervals.length == <span class="number">0</span>) <span class="keyword">return</span> [];</span><br><span class="line">    </span><br><span class="line">    intervals.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> b[<span class="number">0</span>] - a[<span class="number">0</span>]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">const</span> res = [intervals.pop()];</span><br><span class="line">    </span><br><span class="line">     <span class="keyword">while</span> (intervals.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> [a, b] = res[res.length - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">const</span> [c, d] = intervals.pop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(b &gt;= c)&#123;</span><br><span class="line">            <span class="keyword">const</span> start = <span class="built_in">Math</span>.min(a, c);</span><br><span class="line">            <span class="keyword">const</span> end = <span class="built_in">Math</span>.max(b, d);</span><br><span class="line">            </span><br><span class="line">            res[res.length - <span class="number">1</span>][<span class="number">0</span>] = start;</span><br><span class="line">            res[res.length - <span class="number">1</span>][<span class="number">1</span>] = end;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            res.push([c, d])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -843,133 +949,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/Angular%E5%8E%86%E5%8F%B2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Weihong Xu">
-      <meta itemprop="description" content="大前端成长之路">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/13/Angular%E5%8E%86%E5%8F%B2/" class="post-title-link" itemprop="url">前端| Angular 历史</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-13 12:12:57" itemprop="dateCreated datePublished" datetime="2020-07-13T12:12:57+08:00">2020-07-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-18 18:31:40" itemprop="dateModified" datetime="2020-07-18T18:31:40+08:00">2020-07-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/Angular/" itemprop="url" rel="index"><span itemprop="name">Angular</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>From : <a href="https://medium.com/@lifenshades/difference-among-angular-8-7-6-5-4-3-2-breakdown-new-features-and-changes-811fb5f8e6f0" target="_blank" rel="noopener">点我</a><br>#Angular 2(typescript)</p>
-<ol>
-<li>Component-based instead of Controller</li>
-<li>ES6</li>
-<li>Mobile (low-end) device</li>
-</ol>
-<p>#Angular 3</p>
-<ol>
-<li>single repo for everthiing @angular/core @angular/compiler @angular/router</li>
-<li>router realsing (MonoRepo)</li>
-</ol>
-<p>#Angular 4</p>
-<ol>
-<li>underlying concecpt (same or inheritance from 2)</li>
-<li>reduce size of AOT compiler</li>
-<li>Typescript 2.1</li>
-<li>seperate @angular/core to @angular/animation</li>
-<li>block in *ngIF introduced:</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*ngIf&#x3D;”yourCondition; else myFalsyTemplate”s</span><br><span class="line">“&lt;ng-template #myFalsyTemplate&gt;Else Html&lt;&#x2F;ng-template&gt;”</span><br></pre></td></tr></table></figure>
-
-<p>#Angular 5</p>
-<ol>
-<li>HttpClient : a new modulr</li>
-<li>exportAs: multiply names suport for both directives and component</li>
-<li>new Router Life-cycle Events:<ul>
-<li>ActivationStart, ActivationEnd,</li>
-<li>ChildActivationStart, ChildActivationEnd,</li>
-<li>GuardsCheckStart, GuardsCheckEnd, </li>
-<li>ResolveStart and ResolveEnd.</li>
-</ul>
-</li>
-</ol>
-<p>#Angular 6</p>
-<ol>
-<li>More tool-chain and less underlying framework</li>
-<li>RxJs 6</li>
-<li>Synchronizes major version : <ul>
-<li>Angular framework</li>
-<li>Angular CLI</li>
-<li>Angular Material + CDK</li>
-<li><code>&lt;ng-template&gt;</code> instead of <code>&lt;template&gt;</code></li>
-<li>Injectable</li>
-<li>From   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; app.module.ts</span><br><span class="line">import &#123;MyService&#125; from &#39;.&#x2F;my-service&#39;;</span><br><span class="line">providers: [...MyService]</span><br></pre></td></tr></table></figure>
- to  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// MyService.ts</span></span><br><span class="line">@Injectable(&#123; <span class="attr">providedIn</span>: <span class="string">'root'</span>&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">MyService</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>#Angular 7</li>
-</ol>
-<p>#Angular 8    </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/JS-DOM-%E8%99%9A%E6%8B%9FDOM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1219,18 +1198,18 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">68</span>
+        <span class="site-state-item-count">75</span>
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-count">52</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
