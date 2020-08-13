@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-03T10:14:10.686Z</updated>
+  <updated>2020-08-13T10:22:45.549Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,150 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端| JavaScript｜ 垃圾回收汇总</title>
+    <link href="http://yoursite.com/2020/08/13/%E5%89%8D%E7%AB%AF|%20JavaScript%EF%BD%9C%20%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%B1%87%E6%80%BB/"/>
+    <id>http://yoursite.com/2020/08/13/%E5%89%8D%E7%AB%AF|%20JavaScript%EF%BD%9C%20%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%B1%87%E6%80%BB/</id>
+    <published>2020-08-13T07:25:57.000Z</published>
+    <updated>2020-08-13T10:22:45.549Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#垃圾回收思想&lt;/p&gt;
+&lt;p&gt;#垃圾回收算法&lt;/p&gt;
+&lt;h2 id=&quot;简单算法&quot;&gt;&lt;a href=&quot;#简单算法&quot; class=&quot;headerlink&quot; title=&quot;简单算法&quot;&gt;&lt;/a&gt;简单算法&lt;/h2&gt;&lt;h2 id=&quot;多线程垃圾回收-从G1开始&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+      <category term="垃圾回收" scheme="http://yoursite.com/categories/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+      <category term="Go" scheme="http://yoursite.com/categories/Go/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端| JavaScript｜ 前端汇总</title>
+    <link href="http://yoursite.com/2020/08/13/%20%E5%89%8D%E7%AB%AF|%20JavaScript%EF%BD%9C%20%E5%89%8D%E7%AB%AF%E6%B1%87%E6%80%BB/"/>
+    <id>http://yoursite.com/2020/08/13/%20%E5%89%8D%E7%AB%AF|%20JavaScript%EF%BD%9C%20%E5%89%8D%E7%AB%AF%E6%B1%87%E6%80%BB/</id>
+    <published>2020-08-13T04:25:57.000Z</published>
+    <updated>2020-08-13T07:18:50.412Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h1&gt;&lt;h2 id=&quot;语言&quot;&gt;&lt;a href=&quot;#语言&quot; class=&quot;headerlink&quot; title=&quot;语言&quot;&gt;&lt;/a&gt;语言&lt;/h2&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端| JavaScript｜TypeScript｜TypeScript 学习</title>
+    <link href="http://yoursite.com/2020/08/13/%E5%89%8D%E7%AB%AF|%20JavaScript%EF%BD%9CTypeScript%EF%BD%9CTypeScript%20%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2020/08/13/%E5%89%8D%E7%AB%AF|%20JavaScript%EF%BD%9CTypeScript%EF%BD%9CTypeScript%20%E5%AD%A6%E4%B9%A0/</id>
+    <published>2020-08-13T00:25:57.000Z</published>
+    <updated>2020-08-13T03:53:42.034Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;TypeScprit&quot;&gt;&lt;a href=&quot;#TypeScprit&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+      <category term="TypeScript" scheme="http://yoursite.com/categories/TypeScript/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    
+      <category term="“TypeScript”" scheme="http://yoursite.com/tags/%E2%80%9CTypeScript%E2%80%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端| javascript｜bind｜MVC, MVVM各种模式到模版-Angular/Backbone/React</title>
+    <link href="http://yoursite.com/2020/08/05/MVC,%20MVVM%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%88%B0%E6%A8%A1%E7%89%88-Angular:Backbone:React/"/>
+    <id>http://yoursite.com/2020/08/05/MVC,%20MVVM%E5%90%84%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%88%B0%E6%A8%A1%E7%89%88-Angular:Backbone:React/</id>
+    <published>2020-08-05T00:25:57.000Z</published>
+    <updated>2020-08-05T08:21:53.784Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;MVC-MVVM各种模式&quot;&gt;&lt;a href=&quot;#MVC-MVVM各种模式&quot; class=&quot;headerlink&quot; title=&quot;MVC, MVVM各种模式&quot;&gt;&lt;/a&gt;MVC,
+        
+      
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="MVC" scheme="http://yoursite.com/categories/MVC/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="MVC" scheme="http://yoursite.com/tags/MVC/"/>
+    
+  </entry>
   
   <entry>
     <title>前端| javascript｜继承｜从入门到精通：从设计模式来看javascript的继承</title>
@@ -130,7 +274,7 @@
     <link href="http://yoursite.com/2020/07/28/%E5%89%8D%E7%AB%AF|%20React%20%EF%BD%9C%E4%BC%98%E5%8C%96%EF%BD%9CReact%E4%BC%98%E5%8C%96/"/>
     <id>http://yoursite.com/2020/07/28/%E5%89%8D%E7%AB%AF|%20React%20%EF%BD%9C%E4%BC%98%E5%8C%96%EF%BD%9CReact%E4%BC%98%E5%8C%96/</id>
     <published>2020-07-28T08:25:57.000Z</published>
-    <updated>2020-08-01T08:48:45.083Z</updated>
+    <updated>2020-08-13T10:22:04.121Z</updated>
     
     <summary type="html">
     
@@ -197,11 +341,11 @@
   </entry>
   
   <entry>
-    <title>前端| javascript｜函数｜高阶函数：参数传递 ，返回值输出，AOP，反/柯里化，函数节流，分时函数，惰性加载</title>
-    <link href="http://yoursite.com/2020/07/21/%E5%89%8D%E7%AB%AF|%20javascript%EF%BD%9C%E5%87%BD%E6%95%B0%EF%BD%9C%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%EF%BC%9A%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%20%EF%BC%8C%E8%BF%94%E5%9B%9E%E5%80%BC%E8%BE%93%E5%87%BA%EF%BC%8CAOP%EF%BC%8C%E5%8F%8D:%E6%9F%AF%E9%87%8C%E5%8C%96%EF%BC%8C%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81%EF%BC%8C%E5%88%86%E6%97%B6%E5%87%BD%E6%95%B0%EF%BC%8C%E6%83%B0%E6%80%A7%E5%8A%A0%E8%BD%BD/"/>
-    <id>http://yoursite.com/2020/07/21/%E5%89%8D%E7%AB%AF|%20javascript%EF%BD%9C%E5%87%BD%E6%95%B0%EF%BD%9C%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%EF%BC%9A%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%20%EF%BC%8C%E8%BF%94%E5%9B%9E%E5%80%BC%E8%BE%93%E5%87%BA%EF%BC%8CAOP%EF%BC%8C%E5%8F%8D:%E6%9F%AF%E9%87%8C%E5%8C%96%EF%BC%8C%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81%EF%BC%8C%E5%88%86%E6%97%B6%E5%87%BD%E6%95%B0%EF%BC%8C%E6%83%B0%E6%80%A7%E5%8A%A0%E8%BD%BD/</id>
-    <published>2020-07-21T00:25:57.000Z</published>
-    <updated>2020-08-03T09:01:09.894Z</updated>
+    <title>前端|Javascript｜数组｜Vue</title>
+    <link href="http://yoursite.com/2020/07/28/Javascript%EF%BD%9C%E6%95%B0%E7%BB%84%EF%BD%9CVue/"/>
+    <id>http://yoursite.com/2020/07/28/Javascript%EF%BD%9C%E6%95%B0%E7%BB%84%EF%BD%9CVue/</id>
+    <published>2020-07-28T08:25:57.000Z</published>
+    <updated>2020-08-13T10:22:56.051Z</updated>
     
     <summary type="html">
     
@@ -209,8 +353,81 @@
       
         
         
-          &lt;p&gt;#高阶函数&lt;/p&gt;
-&lt;h2 id=&quot;作为参数：回调函数，排序&quot;&gt;&lt;a href=&quot;#作为参数：回调函数，排序&quot; class=&quot;headerlink&quot; title=&quot;作为参数：回调函数，排序&quot;&gt;&lt;/a&gt;作为参数：回调函数，排序&lt;/h2&gt;&lt;h2
+          &lt;p&gt;#&lt;a href=&quot;https://www.bilibili.com/video/BV1tt4y1U74x&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;思想&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用Vue为了组件化框架&lt;ul&gt;
+&lt;li&gt;这个框架是由ES6
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+      <category term="Javascript" scheme="http://yoursite.com/categories/Javascript/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    
+      <category term="“Vue”" scheme="http://yoursite.com/tags/%E2%80%9CVue%E2%80%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端|Javascript｜数组｜Redux是什么 Hooks是否能替代</title>
+    <link href="http://yoursite.com/2020/07/28/%E5%89%8D%E7%AB%AF|Javascript%EF%BD%9C%E6%95%B0%E7%BB%84%EF%BD%9CRedux%E7%9B%B8%E5%85%B3/"/>
+    <id>http://yoursite.com/2020/07/28/%E5%89%8D%E7%AB%AF|Javascript%EF%BD%9C%E6%95%B0%E7%BB%84%EF%BD%9CRedux%E7%9B%B8%E5%85%B3/</id>
+    <published>2020-07-28T08:25:57.000Z</published>
+    <updated>2020-08-10T08:28:17.137Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Redux是什么-Hooks是否能替代&quot;&gt;&lt;a href=&quot;#Redux是什么-Hooks是否能替代&quot; class=&quot;headerlink&quot; title=&quot;Redux是什么 Hooks是否能替代&quot;&gt;&lt;/a&gt;Redux是什么 Hooks是否能替代&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Javascript" scheme="http://yoursite.com/categories/Javascript/"/>
+    
+      <category term="Redux" scheme="http://yoursite.com/categories/Redux/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    
+      <category term="“Redux”" scheme="http://yoursite.com/tags/%E2%80%9CRedux%E2%80%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端| javascript｜函数｜高阶函数：参数传递 ，返回值输出，AOP，反/柯里化，函数节流，分时函数，惰性加载</title>
+    <link href="http://yoursite.com/2020/07/21/%E5%89%8D%E7%AB%AF|%20javascript%EF%BD%9C%E5%87%BD%E6%95%B0%EF%BD%9C%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%EF%BC%9A%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%20%EF%BC%8C%E8%BF%94%E5%9B%9E%E5%80%BC%E8%BE%93%E5%87%BA%EF%BC%8CAOP%EF%BC%8C%E5%8F%8D:%E6%9F%AF%E9%87%8C%E5%8C%96%EF%BC%8C%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81%EF%BC%8C%E5%88%86%E6%97%B6%E5%87%BD%E6%95%B0%EF%BC%8C%E6%83%B0%E6%80%A7%E5%8A%A0%E8%BD%BD/"/>
+    <id>http://yoursite.com/2020/07/21/%E5%89%8D%E7%AB%AF|%20javascript%EF%BD%9C%E5%87%BD%E6%95%B0%EF%BD%9C%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%EF%BC%9A%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%20%EF%BC%8C%E8%BF%94%E5%9B%9E%E5%80%BC%E8%BE%93%E5%87%BA%EF%BC%8CAOP%EF%BC%8C%E5%8F%8D:%E6%9F%AF%E9%87%8C%E5%8C%96%EF%BC%8C%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81%EF%BC%8C%E5%88%86%E6%97%B6%E5%87%BD%E6%95%B0%EF%BC%8C%E6%83%B0%E6%80%A7%E5%8A%A0%E8%BD%BD/</id>
+    <published>2020-07-21T00:25:57.000Z</published>
+    <updated>2020-08-03T17:55:55.923Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#高阶函数&lt;br&gt;本博客来自于《javascript设计模式与开发实践》的内容总结。&lt;/p&gt;
+&lt;h2 id=&quot;作为参数：回调函数，排序&quot;&gt;&lt;a href=&quot;#作为参数：回调函数，排序&quot; class=&quot;headerlink&quot;
         
       
     
@@ -511,166 +728,6 @@
       <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="系统设计" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>中间件策略</title>
-    <link href="http://yoursite.com/2020/07/18/%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%AD%96%E7%95%A5/"/>
-    <id>http://yoursite.com/2020/07/18/%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%AD%96%E7%95%A5/</id>
-    <published>2020-07-17T16:12:57.000Z</published>
-    <updated>2020-07-18T11:13:44.242Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;中间件策略&lt;/p&gt;
-&lt;h1 id=&quot;来源&quot;&gt;&lt;a href=&quot;#来源&quot; class=&quot;headerlink&quot; title=&quot;来源&quot;&gt;&lt;/a&gt;来源&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://jm.taobao.org/archives/page/46/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="中间件" scheme="http://yoursite.com/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
-    
-      <category term="资源" scheme="http://yoursite.com/categories/%E8%B5%84%E6%BA%90/"/>
-    
-      <category term="阿里" scheme="http://yoursite.com/categories/%E8%B5%84%E6%BA%90/%E9%98%BF%E9%87%8C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode| Array |Two Pointers| Stack|42. Trapping Rain Water</title>
-    <link href="http://yoursite.com/2020/07/17/LeetCode|Array|Two%20Pointers|Stack|42.%20Trapping%20Rain%20Water/"/>
-    <id>http://yoursite.com/2020/07/17/LeetCode|Array|Two%20Pointers|Stack|42.%20Trapping%20Rain%20Water/</id>
-    <published>2020-07-17T05:12:57.000Z</published>
-    <updated>2020-07-17T20:40:01.308Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem &quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.com/problems/trapping-rain-water/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="LeetCode刷题" scheme="http://yoursite.com/categories/LeetCode%E5%88%B7%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode|String|Backtracking|17. Letter Combinations of a Phone Number</title>
-    <link href="http://yoursite.com/2020/07/17/LeetCode|String|Backtracking|17.%20Letter%20Combinations%20of%20a%20Phone%20Number/"/>
-    <id>http://yoursite.com/2020/07/17/LeetCode|String|Backtracking|17.%20Letter%20Combinations%20of%20a%20Phone%20Number/</id>
-    <published>2020-07-17T05:12:57.000Z</published>
-    <updated>2020-07-18T19:48:44.292Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem &quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.com/problems/trapping-rain-water/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="LeetCode刷题" scheme="http://yoursite.com/categories/LeetCode%E5%88%B7%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode|String|Backtrack|2. Add Two Numbers</title>
-    <link href="http://yoursite.com/2020/07/17/LeetCode|String|Backtrack|2.%20Add%20Two%20Numbers/"/>
-    <id>http://yoursite.com/2020/07/17/LeetCode|String|Backtrack|2.%20Add%20Two%20Numbers/</id>
-    <published>2020-07-16T21:12:57.000Z</published>
-    <updated>2020-07-18T19:49:12.098Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.com/problems/add-two-numbers/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="LeetCode刷题" scheme="http://yoursite.com/categories/LeetCode%E5%88%B7%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode|String|Backtrack|22. Generate Parentheses</title>
-    <link href="http://yoursite.com/2020/07/17/LeetCode|String|Backtrack|22.%20Generate%20Parentheses/"/>
-    <id>http://yoursite.com/2020/07/17/LeetCode|String|Backtrack|22.%20Generate%20Parentheses/</id>
-    <published>2020-07-16T21:12:57.000Z</published>
-    <updated>2020-07-18T19:49:20.465Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h1&gt;&lt;p&gt;Given n pairs of parentheses, write a function to
-        
-      
-    
-    </summary>
-    
-    
-      <category term="LeetCode刷题" scheme="http://yoursite.com/categories/LeetCode%E5%88%B7%E9%A2%98/"/>
-    
-      <category term="Backtracking" scheme="http://yoursite.com/categories/Backtracking/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode|String|13 - Roman to Integer</title>
-    <link href="http://yoursite.com/2020/07/17/%20LeetCode|String|13%20-%20Roman%20to%20Integer/"/>
-    <id>http://yoursite.com/2020/07/17/%20LeetCode|String|13%20-%20Roman%20to%20Integer/</id>
-    <published>2020-07-16T19:12:57.000Z</published>
-    <updated>2020-07-18T19:35:09.716Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.com/problems/roman-to-integer/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
-    
-      <category term="String" scheme="http://yoursite.com/categories/String/"/>
     
     
   </entry>
