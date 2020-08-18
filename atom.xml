@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-13T10:22:45.549Z</updated>
+  <updated>2020-08-18T08:33:20.749Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端| JavaScript｜ React源代码、Fiber与渲染</title>
+    <link href="http://yoursite.com/2020/08/18/%E5%89%8D%E7%AB%AF|%20JavaScript%EF%BD%9C%20Fiber%E4%B8%8E%E6%B8%B2%E6%9F%93/"/>
+    <id>http://yoursite.com/2020/08/18/%E5%89%8D%E7%AB%AF|%20JavaScript%EF%BD%9C%20Fiber%E4%B8%8E%E6%B8%B2%E6%9F%93/</id>
+    <published>2020-08-18T07:25:57.000Z</published>
+    <updated>2020-08-18T08:33:20.749Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Fiber-vs-VDOM&quot;&gt;&lt;a href=&quot;#Fiber-vs-VDOM&quot; class=&quot;headerlink&quot; title=&quot;Fiber vs VDOM&quot;&gt;&lt;/a&gt;Fiber vs
+        
+      
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+      <category term="垃圾回收" scheme="http://yoursite.com/categories/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+      <category term="Go" scheme="http://yoursite.com/categories/Go/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>前端| JavaScript｜ 垃圾回收汇总</title>
@@ -274,7 +315,7 @@
     <link href="http://yoursite.com/2020/07/28/%E5%89%8D%E7%AB%AF|%20React%20%EF%BD%9C%E4%BC%98%E5%8C%96%EF%BD%9CReact%E4%BC%98%E5%8C%96/"/>
     <id>http://yoursite.com/2020/07/28/%E5%89%8D%E7%AB%AF|%20React%20%EF%BD%9C%E4%BC%98%E5%8C%96%EF%BD%9CReact%E4%BC%98%E5%8C%96/</id>
     <published>2020-07-28T08:25:57.000Z</published>
-    <updated>2020-08-13T10:22:04.121Z</updated>
+    <updated>2020-08-13T14:51:52.127Z</updated>
     
     <summary type="html">
     
@@ -702,33 +743,6 @@
       <category term="LitNode" scheme="http://yoursite.com/tags/LitNode/"/>
     
       <category term="Reverse" scheme="http://yoursite.com/tags/Reverse/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试｜系统设计｜ 大纲</title>
-    <link href="http://yoursite.com/2020/07/19/%E9%9D%A2%E8%AF%95%EF%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%EF%BD%9C%E5%A4%A7%E7%BA%B2%20/"/>
-    <id>http://yoursite.com/2020/07/19/%E9%9D%A2%E8%AF%95%EF%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%EF%BD%9C%E5%A4%A7%E7%BA%B2%20/</id>
-    <published>2020-07-18T19:12:57.000Z</published>
-    <updated>2020-07-18T18:09:01.617Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h1&gt;&lt;h2 id=&quot;美国&quot;&gt;&lt;a href=&quot;#美国&quot; class=&quot;headerlink&quot; title=&quot;美国&quot;&gt;&lt;/a&gt;美国&lt;/h2&gt;&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="系统设计" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
-    
     
   </entry>
   
