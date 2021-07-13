@@ -170,6 +170,120 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/05/19/%E4%BA%A4%E6%98%93|%20%E8%87%AA%E5%88%B6%E6%8C%87%E6%A0%87%EF%BD%9C%20%E9%AB%98%E8%83%9C%E7%8E%87%E4%BA%A4%E6%98%93%E6%A8%A1%E5%9E%8B_%E4%B8%8B%E5%8D%95%E5%89%8D%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E6%AD%A5-%E7%9B%88%E4%BA%8F%E6%AF%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Weihong Xu">
+      <meta itemprop="description" content="大前端成长之路">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/19/%E4%BA%A4%E6%98%93%7C%20%E8%87%AA%E5%88%B6%E6%8C%87%E6%A0%87%EF%BD%9C%20%E9%AB%98%E8%83%9C%E7%8E%87%E4%BA%A4%E6%98%93%E6%A8%A1%E5%9E%8B_%E4%B8%8B%E5%8D%95%E5%89%8D%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E6%AD%A5-%E7%9B%88%E4%BA%8F%E6%AF%94/" class="post-title-link" itemprop="url">交易| 自制指标｜ 高胜率交易模型:下单前的最后一步-盈亏比</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-05-19 15:25:57" itemprop="dateCreated datePublished" datetime="2021-05-19T15:25:57+08:00">2021-05-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-13 21:44:28" itemprop="dateModified" datetime="2021-07-13T21:44:28+08:00">2021-07-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BA%A4%E6%98%93/" itemprop="url" rel="index"><span itemprop="name">交易</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%87%AA%E5%88%B6%E6%8C%87%E6%A0%87/" itemprop="url" rel="index"><span itemprop="name">自制指标</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%AB%98%E8%83%9C%E7%8E%87/" itemprop="url" rel="index"><span itemprop="name">高胜率</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h1><p>我总结了一下我的失败案例。不出意外，每次都是因为固执的做反了趋势，并且忍受了持续性亏损。到了2020年，我的亏损单主要来源于期权操作。这是一个好的信号，也是一个幸运的指标。</p>
+<p>伴随着2020年对基本面的分析，股灾的重筹投注以及压住全球放水让我们有了不赔的优势。但是对动能和盈亏比的不了解。让我没有能够赚到足够的资本。所以我写了这一篇，主要是抛砖引玉，寻找一种最简单盈亏比的策略。</p>
+<h2 id="写在前面的话："><a href="#写在前面的话：" class="headerlink" title="写在前面的话："></a>写在前面的话：</h2><h3 id="为什么一定是盈亏比？"><a href="#为什么一定是盈亏比？" class="headerlink" title="为什么一定是盈亏比？"></a>为什么一定是盈亏比？</h3><p>好的入场点能让在出场点上有更好的心里优势。买在高点的确是策略之一，但是后面每一个单位时间的价格形态（K棒）都会造成心理压力。如果不笃信则会卖在起涨点，如果笃信则会造成大额亏损。</p>
+<h3 id="如果是顺大周期逆小周期会怎么样呢？"><a href="#如果是顺大周期逆小周期会怎么样呢？" class="headerlink" title="如果是顺大周期逆小周期会怎么样呢？"></a>如果是顺大周期逆小周期会怎么样呢？</h3><p>如果逆势的小周期变成了大周期，买的起涨点却变成了卖压点。对于新手朋友来说，会怀疑这个理论。但是这个理论却是让不知信息点散户获胜的唯一法门。（从赔率角度出发）</p>
+<p>在玩德州扑克此类投资游戏的时候，在7到9人局面对CUTOFF位置玩家下注，和SB位置玩家下注时候，BB位（视角）的玩家往往会跟注。如果你在听直播的话，会常常听到解说说到：按照赔率来说，是合适的。</p>
+<p>面对德州扑克这种负和游戏（庄抽水），股票市场也是一个类似游戏（券商抽水）。不论大家是资金管理的信徒（海龟交易法），还是技术指标派（《走进我的交易室》），或者是分析基本且等待股灾的投资者。在多个市场中，我们寻找可以投资的标的。目的是，获得高赔率的交易。</p>
+<p>请注意，是高赔率而不是高概率获胜。</p>
+<p>倘若在1987年选择一个非时间耗尽的投资标的，拥有者最小交易规模，则你拥有了100%的概率。但是这样的投资，与购买黄金，国债，房产，甚至叛逃他国赚取的美金多寡，只有你自己最清楚。</p>
+<h1 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h1><h3 id="我怎么定义盈亏比？"><a href="#我怎么定义盈亏比？" class="headerlink" title="我怎么定义盈亏比？"></a>我怎么定义盈亏比？</h3><p>   我把盈亏比定义的十分简单，甚至简单的可笑。因为这是我下单前的最后一步。下单前我应该考虑好突破区间，资金流向，基本面向好，多头空头能量等。最后一步的盈亏比起到了过滤投资点位的目的。另外，我需要在很小的时间刻度上进行过滤。</p>
+<p>   所以，我期望这个指标可以有如此大作用：</p>
+<blockquote>
+<p>盈亏比=（高点-开盘价格）/ （低点-收盘价格）</p>
+</blockquote>
+<p>考虑到情绪因素，一个悲观的投资者认为资金不会卖在高点，那么公式应该改为：</p>
+<p>盈亏比=（高点-开盘价格 -波动）/ （低点-收盘价格+波动）</p>
+<p>但是我的指标是为了过滤购买机会而不是让我错过机会，所以我宁愿相信我有能力卖在高点，而不是放弃一些仅仅是波动率的影响就轻易放弃的机会。</p>
+<p>盈亏比=（高点-开盘价格 +波动）/ （低点-收盘价格-波动）</p>
+<blockquote>
+<p>TR1:=MAX(MAX((HIGH-LOW),ABS(REF(CLOSE,1)-HIGH)),ABS(REF(CLOSE,1)-LOW));</p>
+</blockquote>
+<blockquote>
+<p>X1:=IFF(CLOSE =LOWEST + K* ATR1, HIGHEST-CLOSE + K* ATR1,ABS((HIGHEST-OPEN + K* ATR1)/(CLOSE-LOWEST - K* ATR1)) )</p>
+</blockquote>
+<p>如果你对公示敏感的话，会想问我高点地点如何计算：</p>
+<blockquote>
+<p>高点= MAX（N日最高点，N日EMA）</p>
+</blockquote>
+<blockquote>
+<p>低点= MAX（N日最低点， N日EMA）</p>
+</blockquote>
+<p>由于依靠EMA交易的人数太多，所以不得不考虑他们在到达价格时候的买入和卖出。特别是，这里的他们并不是人的情况下（量化的机器）。</p>
+<p>所以我可以用大周期做一个HIGHEST，也可以用小周期做一个HIGHER。然后，得到了一个大周期的盈亏比，和小周期的盈亏比。</p>
+<p>然后，如果我们遇到了盈亏比都很合适的点，我简单的认为LN（X1）&gt;1时候是最好的观察点，当这个值大于1的时候买入，当这个值小于1的时候卖出。毕竟自然对数被设计出来就是为了金融投资的。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/01/%E5%89%8D%E7%AB%AF|Javascript%EF%BD%9CLess%20%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1150,131 +1264,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/28/Javascript%EF%BD%9C%E6%95%B0%E7%BB%84%EF%BD%9CVue/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Weihong Xu">
-      <meta itemprop="description" content="大前端成长之路">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/28/Javascript%EF%BD%9C%E6%95%B0%E7%BB%84%EF%BD%9CVue/" class="post-title-link" itemprop="url">前端|Javascript｜数组｜Vue</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-28 16:25:57" itemprop="dateCreated datePublished" datetime="2020-07-28T16:25:57+08:00">2020-07-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-13 18:22:56" itemprop="dateModified" datetime="2020-08-13T18:22:56+08:00">2020-08-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>#<a href="https://www.bilibili.com/video/BV1tt4y1U74x" target="_blank" rel="noopener">思想</a></p>
-<ol>
-<li>使用Vue为了组件化框架<ul>
-<li>这个框架是由ES6 模块化来进行的。</li>
-</ul>
-</li>
-<li>Vue的规范<ul>
-<li>数据的双向绑定：<ul>
-<li>强规范：template script name（上手快）<ul>
-<li>name：props coponent mounted methods style</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>JS对Vue改造：<ul>
-<li>派发器改造：（模式解构）<ul>
-<li>不让method 变得臃肿<ul>
-<li>通过type 找到事件的逻辑 </li>
-<li>Vuex redux里面使用store作为中央状态管理，页面组建公共状态</li>
-<li>reducer/type/dispatch</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>组件：<ul>
-<li>分类：页面组件（块组件的容器），块组件（组件出口，子组件）</li>
-<li>块组件：数据保存，逻辑部分<ul>
-<li>视图</li>
-<li>数据 属性</li>
-<li>方法通过事件传递到块组件中 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li></li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1342,18 +1335,18 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">60</span>
+          <span class="site-state-item-count">61</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">84</span>
+        <span class="site-state-item-count">87</span>
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-count">63</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
