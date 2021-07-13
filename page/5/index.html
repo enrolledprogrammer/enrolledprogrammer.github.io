@@ -260,6 +260,97 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|TwoPointer|24_SwapNodeInPairs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Weihong Xu">
+      <meta itemprop="description" content="大前端成长之路">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/14/LeetCode%7CTwoPointer%7C24_SwapNodeInPairs/" class="post-title-link" itemprop="url">LeetCode|24 Swap Node In Pairs</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-14 12:12:57" itemprop="dateCreated datePublished" datetime="2020-07-14T12:12:57+08:00">2020-07-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-20 00:52:01" itemprop="dateModified" datetime="2020-07-20T00:52:01+08:00">2020-07-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">LeetCode刷题</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode%E5%88%B7%E9%A2%98/TwoPointer/" itemprop="url" rel="index"><span itemprop="name">TwoPointer</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Given a linked list, swap every two adjacent nodes and return its head.</p>
+<p>You may not modify the values in the list’s nodes, only nodes itself may be changed.</p>
+<p>Example:</p>
+<blockquote>
+<p>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.</p>
+</blockquote>
+<h1 id="Sovle"><a href="#Sovle" class="headerlink" title="Sovle"></a>Sovle</h1><h3 id="Link-Table"><a href="#Link-Table" class="headerlink" title="Link Table"></a>Link Table</h3><p>这题本意比较简单，1 -&gt; 2 -&gt; 3 -&gt; 4 的情况下可以定义一个递归的辅助函数 helper，这个辅助函数对于节点和它的下一个节点进行交换，比如 helper(1) 处理 1 -&gt; 2，并且把交换变成 2 -&gt; 1 的尾节点 1的next继续指向 helper(3)也就是交换后的 4 -&gt; 3。</p>
+<p>边界情况在于，如果顺利的作了两两交换，那么交换后我们的函数返回出去的是 交换后的头部节点，但是如果是奇数剩余项的情况下，没办法做交换，那就需要直接返回 原本的头部节点。这个在 helper函数和主函数中都有体现。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val, next) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.next = (next===undefined ? null : next)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;ListNode&#125;</span> <span class="variable">head</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;ListNode&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> swapPairs = <span class="function"><span class="keyword">function</span>(<span class="params">head</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!head)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> helper = <span class="function"><span class="keyword">function</span> (<span class="params">node</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> tempNext = node.next;</span><br><span class="line">        <span class="keyword">if</span>(tempNext)&#123;</span><br><span class="line">            <span class="keyword">let</span> tempNextNext = node.next.next; <span class="comment">//1 --&gt; 3--&gt;</span></span><br><span class="line">            <span class="comment">//swap 1-&gt; 2 to 2-&gt;1</span></span><br><span class="line">            node.next.next = node;</span><br><span class="line">            <span class="comment">//2 -&gt; 1 ---&gt;</span></span><br><span class="line">            node.next = tempNextNext ? helper(tempNextNext) : <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> tempNext || node;</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> res =helper(head);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res || head;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>1） 指针指向<br>2）修改链表<br>3）返回指针</p>
+<p><a href="https://www.bruceyj.com/frontend-leetcode/problems/data-structure/24.html" target="_blank" rel="noopener">from</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> swapPairs = <span class="function"><span class="keyword">function</span>(<span class="params">head</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!head || !head.next)</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    <span class="keyword">let</span> fst = head;</span><br><span class="line">    <span class="keyword">let</span> sec = head.next;</span><br><span class="line">    </span><br><span class="line">    fst.next = swapPairs(sec.next);</span><br><span class="line">    sec.next = fst;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> sec;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> swapPairs = <span class="function"><span class="keyword">function</span>(<span class="params">head</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> dummy = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">    dummy.next = head;</span><br><span class="line">    <span class="keyword">let</span> prev = dummy;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(head &amp;&amp; head.next)&#123;</span><br><span class="line">        prev.next = head.next; <span class="comment">// prev -&gt; 2</span></span><br><span class="line">        head.next = head.next.next;</span><br><span class="line">        prev.next.next = head  <span class="comment">// prev -&gt; 2 -&gt; 1</span></span><br><span class="line">        </span><br><span class="line">        prev = head;</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|stack|56%20-%20Merge%20Intervals/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -349,7 +440,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|TwoPointer|24_SwapNodeInPairs/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|Two_Pointer|16-3Sum_Closet/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -363,7 +454,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/07/14/LeetCode%7CTwoPointer%7C24_SwapNodeInPairs/" class="post-title-link" itemprop="url">LeetCode|24 Swap Node In Pairs</a>
+            <a href="/2020/07/14/LeetCode%7CTwo_Pointer%7C16-3Sum_Closet/" class="post-title-link" itemprop="url">LeetCode|Two_Pointer|16 3Sum Closet</a>
         </h2>
 
         <div class="post-meta">
@@ -380,7 +471,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-20 00:52:01" itemprop="dateModified" datetime="2020-07-20T00:52:01+08:00">2020-07-20</time>
+                <time title="修改时间：2020-07-19 03:49:39" itemprop="dateModified" datetime="2020-07-19T03:49:39+08:00">2020-07-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -392,7 +483,7 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LeetCode%E5%88%B7%E9%A2%98/TwoPointer/" itemprop="url" rel="index"><span itemprop="name">TwoPointer</span></a>
+                  <a href="/categories/Two-Pointer/" itemprop="url" rel="index"><span itemprop="name">Two_Pointer</span></a>
                 </span>
             </span>
 
@@ -407,21 +498,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Given a linked list, swap every two adjacent nodes and return its head.</p>
-<p>You may not modify the values in the list’s nodes, only nodes itself may be changed.</p>
-<p>Example:</p>
-<blockquote>
-<p>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.</p>
-</blockquote>
-<h1 id="Sovle"><a href="#Sovle" class="headerlink" title="Sovle"></a>Sovle</h1><h3 id="Link-Table"><a href="#Link-Table" class="headerlink" title="Link Table"></a>Link Table</h3><p>这题本意比较简单，1 -&gt; 2 -&gt; 3 -&gt; 4 的情况下可以定义一个递归的辅助函数 helper，这个辅助函数对于节点和它的下一个节点进行交换，比如 helper(1) 处理 1 -&gt; 2，并且把交换变成 2 -&gt; 1 的尾节点 1的next继续指向 helper(3)也就是交换后的 4 -&gt; 3。</p>
-<p>边界情况在于，如果顺利的作了两两交换，那么交换后我们的函数返回出去的是 交换后的头部节点，但是如果是奇数剩余项的情况下，没办法做交换，那就需要直接返回 原本的头部节点。这个在 helper函数和主函数中都有体现。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val, next) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.next = (next===undefined ? null : next)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;ListNode&#125;</span> <span class="variable">head</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;ListNode&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> swapPairs = <span class="function"><span class="keyword">function</span>(<span class="params">head</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!head)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> helper = <span class="function"><span class="keyword">function</span> (<span class="params">node</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> tempNext = node.next;</span><br><span class="line">        <span class="keyword">if</span>(tempNext)&#123;</span><br><span class="line">            <span class="keyword">let</span> tempNextNext = node.next.next; <span class="comment">//1 --&gt; 3--&gt;</span></span><br><span class="line">            <span class="comment">//swap 1-&gt; 2 to 2-&gt;1</span></span><br><span class="line">            node.next.next = node;</span><br><span class="line">            <span class="comment">//2 -&gt; 1 ---&gt;</span></span><br><span class="line">            node.next = tempNextNext ? helper(tempNextNext) : <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> tempNext || node;</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> res =helper(head);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res || head;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>16—<a href="https://leetcode.com/problems/3sum-closest/" target="_blank" rel="noopener">3Sum Closest</a><br>Medium</p>
+<p>Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
+<p>Example 1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums &#x3D; [-1,2,1,-4], target &#x3D; 1</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 &#x3D; 2).</span><br></pre></td></tr></table></figure>
 
-<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>1） 指针指向<br>2）修改链表<br>3）返回指针</p>
-<p><a href="https://www.bruceyj.com/frontend-leetcode/problems/data-structure/24.html" target="_blank" rel="noopener">from</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> swapPairs = <span class="function"><span class="keyword">function</span>(<span class="params">head</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!head || !head.next)</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    <span class="keyword">let</span> fst = head;</span><br><span class="line">    <span class="keyword">let</span> sec = head.next;</span><br><span class="line">    </span><br><span class="line">    fst.next = swapPairs(sec.next);</span><br><span class="line">    sec.next = fst;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> sec;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> swapPairs = <span class="function"><span class="keyword">function</span>(<span class="params">head</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> dummy = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">    dummy.next = head;</span><br><span class="line">    <span class="keyword">let</span> prev = dummy;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(head &amp;&amp; head.next)&#123;</span><br><span class="line">        prev.next = head.next; <span class="comment">// prev -&gt; 2</span></span><br><span class="line">        head.next = head.next.next;</span><br><span class="line">        prev.next.next = head  <span class="comment">// prev -&gt; 2 -&gt; 1</span></span><br><span class="line">        </span><br><span class="line">        prev = head;</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Constraints:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 &lt;&#x3D; nums.length &lt;&#x3D; 10^3</span><br><span class="line">-10^3 &lt;&#x3D; nums[i] &lt;&#x3D; 10^3</span><br><span class="line">-10^4 &lt;&#x3D; target &lt;&#x3D; 10^4</span><br></pre></td></tr></table></figure>
+<h1 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h1><h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3><p>先按照升序排序，然后分别从左往右依次选择一个基础点 i（0 &lt;= i &lt;= nums.length - 3），在基础点的右侧用双指针去不断的找最小的差值。</p>
+<p>假设基础点是 i，初始化的时候，双指针分别是：</p>
+<p>left：i + 1，基础点右边一位。<br>right: nums.length - 1 数组最后一位。<br>然后求此时的和，如果和大于 target，那么可以把右指针左移一位，去试试更小一点的值，反之则把左指针右移。</p>
+<p>在这个过程中，不断更新全局的最小差值 min，和此时记录下来的和 res。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[]&#125;</span> <span class="variable">nums</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">target</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> threeSumClosest = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> len = nums.length;</span><br><span class="line">    <span class="keyword">if</span>(len === <span class="number">3</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> getSum(nums);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    nums.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span> a-b);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> min = <span class="literal">Infinity</span>;</span><br><span class="line">    <span class="keyword">let</span> res;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len - <span class="number">2</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">let</span> basic = nums[i];</span><br><span class="line">        <span class="keyword">let</span> left = i + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">let</span> right = len - <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">            <span class="keyword">let</span> sum = basic + nums[left] + nums[right];</span><br><span class="line">            <span class="keyword">let</span> diff = <span class="built_in">Math</span>.abs(sum - target);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(diff &lt; min)&#123;</span><br><span class="line">                min = diff;</span><br><span class="line">                res = sum;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(sum &lt; target)&#123;</span><br><span class="line">                left ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>( sum &gt; target)&#123;</span><br><span class="line">                right --;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> sum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">nums</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> nums.reduce(<span class="function">(<span class="params">total, cur</span>)=&gt;</span> total + cur, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h3><p><a href="https://mp.weixin.qq.com/s/7mJSpnHE319swy0LStpavQ" target="_blank" rel="noopener">双指针问题</a></p>
+
       
     </div>
 
@@ -647,6 +739,133 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/Angular%E5%8E%86%E5%8F%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Weihong Xu">
+      <meta itemprop="description" content="大前端成长之路">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/13/Angular%E5%8E%86%E5%8F%B2/" class="post-title-link" itemprop="url">前端| Angular 历史</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-13 12:12:57" itemprop="dateCreated datePublished" datetime="2020-07-13T12:12:57+08:00">2020-07-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-18 18:31:40" itemprop="dateModified" datetime="2020-07-18T18:31:40+08:00">2020-07-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/Angular/" itemprop="url" rel="index"><span itemprop="name">Angular</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>From : <a href="https://medium.com/@lifenshades/difference-among-angular-8-7-6-5-4-3-2-breakdown-new-features-and-changes-811fb5f8e6f0" target="_blank" rel="noopener">点我</a><br>#Angular 2(typescript)</p>
+<ol>
+<li>Component-based instead of Controller</li>
+<li>ES6</li>
+<li>Mobile (low-end) device</li>
+</ol>
+<p>#Angular 3</p>
+<ol>
+<li>single repo for everthiing @angular/core @angular/compiler @angular/router</li>
+<li>router realsing (MonoRepo)</li>
+</ol>
+<p>#Angular 4</p>
+<ol>
+<li>underlying concecpt (same or inheritance from 2)</li>
+<li>reduce size of AOT compiler</li>
+<li>Typescript 2.1</li>
+<li>seperate @angular/core to @angular/animation</li>
+<li>block in *ngIF introduced:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*ngIf&#x3D;”yourCondition; else myFalsyTemplate”s</span><br><span class="line">“&lt;ng-template #myFalsyTemplate&gt;Else Html&lt;&#x2F;ng-template&gt;”</span><br></pre></td></tr></table></figure>
+
+<p>#Angular 5</p>
+<ol>
+<li>HttpClient : a new modulr</li>
+<li>exportAs: multiply names suport for both directives and component</li>
+<li>new Router Life-cycle Events:<ul>
+<li>ActivationStart, ActivationEnd,</li>
+<li>ChildActivationStart, ChildActivationEnd,</li>
+<li>GuardsCheckStart, GuardsCheckEnd, </li>
+<li>ResolveStart and ResolveEnd.</li>
+</ul>
+</li>
+</ol>
+<p>#Angular 6</p>
+<ol>
+<li>More tool-chain and less underlying framework</li>
+<li>RxJs 6</li>
+<li>Synchronizes major version : <ul>
+<li>Angular framework</li>
+<li>Angular CLI</li>
+<li>Angular Material + CDK</li>
+<li><code>&lt;ng-template&gt;</code> instead of <code>&lt;template&gt;</code></li>
+<li>Injectable</li>
+<li>From   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; app.module.ts</span><br><span class="line">import &#123;MyService&#125; from &#39;.&#x2F;my-service&#39;;</span><br><span class="line">providers: [...MyService]</span><br></pre></td></tr></table></figure>
+ to  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// MyService.ts</span></span><br><span class="line">@Injectable(&#123; <span class="attr">providedIn</span>: <span class="string">'root'</span>&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">MyService</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>#Angular 7</li>
+</ol>
+<p>#Angular 8    </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/JS-DOM-%E8%99%9A%E6%8B%9FDOM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -686,11 +905,11 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -810,133 +1029,6 @@
 <ul>
 <li><a href="https://cordova.axuer.com/docs/zh-cn/latest/cordova/events/events.html#volumeupbutton按下增加声音按钮" target="_blank" rel="noopener">cordova</a></li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/Angular%E5%8E%86%E5%8F%B2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Weihong Xu">
-      <meta itemprop="description" content="大前端成长之路">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/13/Angular%E5%8E%86%E5%8F%B2/" class="post-title-link" itemprop="url">前端| Angular 历史</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-13 12:12:57" itemprop="dateCreated datePublished" datetime="2020-07-13T12:12:57+08:00">2020-07-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-18 18:31:40" itemprop="dateModified" datetime="2020-07-18T18:31:40+08:00">2020-07-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/Angular/" itemprop="url" rel="index"><span itemprop="name">Angular</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>From : <a href="https://medium.com/@lifenshades/difference-among-angular-8-7-6-5-4-3-2-breakdown-new-features-and-changes-811fb5f8e6f0" target="_blank" rel="noopener">点我</a><br>#Angular 2(typescript)</p>
-<ol>
-<li>Component-based instead of Controller</li>
-<li>ES6</li>
-<li>Mobile (low-end) device</li>
-</ol>
-<p>#Angular 3</p>
-<ol>
-<li>single repo for everthiing @angular/core @angular/compiler @angular/router</li>
-<li>router realsing (MonoRepo)</li>
-</ol>
-<p>#Angular 4</p>
-<ol>
-<li>underlying concecpt (same or inheritance from 2)</li>
-<li>reduce size of AOT compiler</li>
-<li>Typescript 2.1</li>
-<li>seperate @angular/core to @angular/animation</li>
-<li>block in *ngIF introduced:</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*ngIf&#x3D;”yourCondition; else myFalsyTemplate”s</span><br><span class="line">“&lt;ng-template #myFalsyTemplate&gt;Else Html&lt;&#x2F;ng-template&gt;”</span><br></pre></td></tr></table></figure>
-
-<p>#Angular 5</p>
-<ol>
-<li>HttpClient : a new modulr</li>
-<li>exportAs: multiply names suport for both directives and component</li>
-<li>new Router Life-cycle Events:<ul>
-<li>ActivationStart, ActivationEnd,</li>
-<li>ChildActivationStart, ChildActivationEnd,</li>
-<li>GuardsCheckStart, GuardsCheckEnd, </li>
-<li>ResolveStart and ResolveEnd.</li>
-</ul>
-</li>
-</ol>
-<p>#Angular 6</p>
-<ol>
-<li>More tool-chain and less underlying framework</li>
-<li>RxJs 6</li>
-<li>Synchronizes major version : <ul>
-<li>Angular framework</li>
-<li>Angular CLI</li>
-<li>Angular Material + CDK</li>
-<li><code>&lt;ng-template&gt;</code> instead of <code>&lt;template&gt;</code></li>
-<li>Injectable</li>
-<li>From   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; app.module.ts</span><br><span class="line">import &#123;MyService&#125; from &#39;.&#x2F;my-service&#39;;</span><br><span class="line">providers: [...MyService]</span><br></pre></td></tr></table></figure>
- to  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// MyService.ts</span></span><br><span class="line">@Injectable(&#123; <span class="attr">providedIn</span>: <span class="string">'root'</span>&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">MyService</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>#Angular 7</li>
-</ol>
-<p>#Angular 8    </p>
 
       
     </div>
@@ -1079,166 +1171,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/Vue-%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Weihong Xu">
-      <meta itemprop="description" content="大前端成长之路">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/13/Vue-%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" class="post-title-link" itemprop="url">前端｜Vue 杂七杂八</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-13 12:12:57" itemprop="dateCreated datePublished" datetime="2020-07-13T12:12:57+08:00">2020-07-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-18 18:38:04" itemprop="dateModified" datetime="2020-07-18T18:38:04+08:00">2020-07-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/%E5%89%8D%E7%AB%AF/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><ol>
-<li><p>Keep-alive （场景 视频VLog） <a href="https://juejin.im/post/5d92acae6fb9a04e143daa0c" target="_blank" rel="noopener">  文章</a></p>
-<ol>
-<li>作用：缓存 - 降级荣塞</li>
-<li>How： 以队列方式缓存</li>
-<li>缓存的是什么：VNode (虚拟DOM)</li>
-<li>坑：内存泄漏   解决方法：缓存数量限制<ol start="5">
-<li>使用了什么机制： LRU</li>
-</ol>
-<ul>
-<li>显示隐藏</li>
-<li>设置缓存大小 </li>
-<li>自己写<pre><code>（Keep-alive 缓存的是结果，也就是vnode，如果太大就缓存数据）</code></pre><ul>
-<li>有卡顿<ul>
-<li></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<p>Vue 基于数据驱动  -&gt; 缓存数据<br>#第一 </p>
-<ol>
-<li><p>Vue runtime + complier</p>
-<ul>
-<li><p>运行时生命周期 编译时</p>
-<ul>
-<li><p>template -&gt;</p>
-</li>
-<li><p>(上线前变异)ast-&gt;</p>
-<ul>
-<li><p>(本地Complier，将<em>.vue打包成js，上线的时候只是JS 上传到服务器)render -&gt;</em></p>
-<ul>
-<li><p>【运行时】<strong>vnode （内存中存在的状态）在内存中diff</strong>-&gt;</p>
-<blockquote>
-<pre><code>DOM PULL 在React，主动发出的动作（react setSate props）后数据发生改变
- DOM PUSH 在Vue，通过响应数据生成DOM                    </code></pre><p><code>&lt;div&gt;&lt;/div&gt;.   一个组建-&gt; 一个watcher[内存]-&gt; DOM</code><br>组建内部用Diff修改<br>为什么有Vnode/虚拟DOM： （缓存：类似 寄存器/内存/硬盘） 虚拟DOM - 缓冲地带 - 不同端运行</p>
-</blockquote>
-<p>在线编译：浏览器JS运行时候调用template，然后解析<br>RuntimeOnly：如果要在Template里面加入<strong>Component后性能非常差，必须要加入Complier包</strong>，优化成render函数然后删除这个包（资源优化）。                </p>
-<ul>
-<li>（通过patch（）{ doucument.getElementBy(‘’).apendchild()}）<strong>修改正式DOM的动作，通过虚拟DOM树递归【慢】， react中做了fiber，做时间分片</strong> <a href="https://juejin.im/post/5dadc6045188255a270a0f85" target="_blank" rel="noopener">React Fiber(时间分片)</a><ul>
-<li>-&gt; 转换成DOM</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>script(浏览器从服务器拉下js开始运行) –&gt; </p>
-</li>
-<li><p>new Vue()  -&gt; (把数据处理成)响应data <strong>（生成vnode）</strong></p>
-</li>
-<li><p>style</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Vue 浏览器端一贞解析机制</p>
-</li>
-<li><p>Vue 首屏优化</p>
-<ul>
-<li>优化<ul>
-<li>如何优化加载速度，白屏如何引起的<ul>
-<li>运行环境：</li>
-<li>浏览器如何渲染：js/css/html </li>
-<li>来源 - <a href="https://aerotwist.com/blog/the-anatomy-of-a-frame/" target="_blank" rel="noopener">浏览器一帧渲染</a>：       </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1310,18 +1242,18 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-count">60</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">83</span>
+        <span class="site-state-item-count">84</span>
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">58</span>
+        <span class="site-state-item-count">59</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1352,7 +1284,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
