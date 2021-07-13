@@ -274,7 +274,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|Tree|617_Merge_Tree/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|Two_Pointer|16-3Sum_Closet/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -288,7 +288,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/07/14/LeetCode%7CTree%7C617_Merge_Tree/" class="post-title-link" itemprop="url">LeetCode|Tree| 617 Merge_Tree</a>
+            <a href="/2020/07/14/LeetCode%7CTwo_Pointer%7C16-3Sum_Closet/" class="post-title-link" itemprop="url">LeetCode|Two_Pointer|16 3Sum Closet</a>
         </h2>
 
         <div class="post-meta">
@@ -305,7 +305,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-19 03:39:41" itemprop="dateModified" datetime="2020-07-19T03:39:41+08:00">2020-07-19</time>
+                <time title="修改时间：2020-07-19 03:49:39" itemprop="dateModified" datetime="2020-07-19T03:49:39+08:00">2020-07-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -317,7 +317,7 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%8C%E6%A0%91/" itemprop="url" rel="index"><span itemprop="name">数据结构，树</span></a>
+                  <a href="/categories/Two-Pointer/" itemprop="url" rel="index"><span itemprop="name">Two_Pointer</span></a>
                 </span>
             </span>
 
@@ -332,19 +332,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a><a href="https://leetcode.com/problems/merge-two-binary-trees/" target="_blank" rel="noopener">题目</a></h1><p>617- Merge Two Binary Trees</p>
-<p>Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not.</p>
-<p>You need to merge them into a new binary tree. The merge rule is that if two nodes overlap, then sum node values up as the new value of the merged node. Otherwise, the NOT null node will be used as the node of new tree.</p>
+          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>16—<a href="https://leetcode.com/problems/3sum-closest/" target="_blank" rel="noopener">3Sum Closest</a><br>Medium</p>
+<p>Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
 <p>Example 1:</p>
-<blockquote>
-<p>Input:<br>    Tree 1                     Tree 2<br>          1                         2<br>         / \                       / \<br>        3   2                     1   3<br>       /                           \   \<br>      5                             4   7<br>Output:<br>Merged tree:<br>         3<br>        / <br>       4   5<br>      / \   \<br>     5   4   7</p>
-</blockquote>
-<p>Note: The merging process must start from the root nodes of both trees.</p>
-<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val, left, right) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.left = (left===undefined ? null : left)</span></span><br><span class="line"><span class="comment"> *     this.right = (right===undefined ? null : right)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;TreeNode&#125;</span> <span class="variable">t1</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;TreeNode&#125;</span> <span class="variable">t2</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;TreeNode&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> <span class="comment">//递归算法：</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 1.以预购方式遍历树</span></span><br><span class="line"><span class="comment">// 2.检查两个树节点是否均为NULL</span></span><br><span class="line"><span class="comment">// 1.如果不是，则更新值</span></span><br><span class="line"><span class="comment">// 3.递归左子树</span></span><br><span class="line"><span class="comment">// 4.重复右子树</span></span><br><span class="line"><span class="comment">// 5.返回更新的树的根</span></span><br><span class="line"><span class="keyword">var</span> mergeTrees = <span class="function"><span class="keyword">function</span>(<span class="params">t1, t2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!t1 &amp;&amp; !t2)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!t1 || !t2)&#123;</span><br><span class="line">        <span class="keyword">return</span> t1 || t2;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> root = <span class="keyword">new</span> TreeNode(t1.val + t2.val);</span><br><span class="line">    </span><br><span class="line">    root.left = mergeTrees(t1.left, t2.left);</span><br><span class="line">    root.right = mergeTrees(t1.right, t2.right);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums &#x3D; [-1,2,1,-4], target &#x3D; 1</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 &#x3D; 2).</span><br></pre></td></tr></table></figure>
 
-<h2 id="非递归-迭代）"><a href="#非递归-迭代）" class="headerlink" title="非递归(迭代）"></a>非递归(迭代）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;迭代算法：</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; 1.创建一个堆栈</span><br><span class="line">&#x2F;&#x2F; 2.将两棵树的根节点推入堆栈。</span><br><span class="line">&#x2F;&#x2F; 3.当堆栈不为空时，执行以下步骤：</span><br><span class="line">	&#x2F;&#x2F; 1.从堆栈顶部弹出一个节点对</span><br><span class="line">	&#x2F;&#x2F; 2.对于每个删除的节点对，添加与两个节点对应的值，并更新第一棵树中相应节点的值</span><br><span class="line">	&#x2F;&#x2F; 3.如果第一棵树的左子节点存在，则将两棵树的左子节点（对）推入堆栈。</span><br><span class="line">	&#x2F;&#x2F; 4.如果第一棵树的左子节点不存在，则将第二棵树的左子节点附加到第一棵树的当前节点</span><br><span class="line">	&#x2F;&#x2F; 5.对正确的子对也执行相同的操作。</span><br><span class="line">	&#x2F;&#x2F; 6.如果当前两个节点均为NULL，则继续从堆栈中弹出下一个节点。</span><br><span class="line">&#x2F;&#x2F;4. 返回</span><br></pre></td></tr></table></figure>
-<p>迭代算法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mergeTrees = <span class="function">(<span class="params">t1, t2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (t1 === <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> t2;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> stack = [];</span><br><span class="line">  stack.push([t1, t2]);</span><br><span class="line">  <span class="keyword">while</span> (stack.length !== <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> t = stack.pop();</span><br><span class="line">    <span class="keyword">if</span> (t[<span class="number">0</span>] === <span class="literal">null</span> || t[<span class="number">1</span>] === <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    t[<span class="number">0</span>].val += t[<span class="number">1</span>].val;</span><br><span class="line">    <span class="keyword">if</span> (t[<span class="number">0</span>].left === <span class="literal">null</span>) &#123;</span><br><span class="line">      t[<span class="number">0</span>].left = t[<span class="number">1</span>].left;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      stack.push([t[<span class="number">0</span>].left, t[<span class="number">1</span>].left]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (t[<span class="number">0</span>].right === <span class="literal">null</span>) &#123;</span><br><span class="line">      t[<span class="number">0</span>].right = t[<span class="number">1</span>].right;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      stack.push([t[<span class="number">0</span>].right, t[<span class="number">1</span>].right]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> t1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Constraints:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 &lt;&#x3D; nums.length &lt;&#x3D; 10^3</span><br><span class="line">-10^3 &lt;&#x3D; nums[i] &lt;&#x3D; 10^3</span><br><span class="line">-10^4 &lt;&#x3D; target &lt;&#x3D; 10^4</span><br></pre></td></tr></table></figure>
+<h1 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h1><h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3><p>先按照升序排序，然后分别从左往右依次选择一个基础点 i（0 &lt;= i &lt;= nums.length - 3），在基础点的右侧用双指针去不断的找最小的差值。</p>
+<p>假设基础点是 i，初始化的时候，双指针分别是：</p>
+<p>left：i + 1，基础点右边一位。<br>right: nums.length - 1 数组最后一位。<br>然后求此时的和，如果和大于 target，那么可以把右指针左移一位，去试试更小一点的值，反之则把左指针右移。</p>
+<p>在这个过程中，不断更新全局的最小差值 min，和此时记录下来的和 res。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[]&#125;</span> <span class="variable">nums</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">target</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> threeSumClosest = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> len = nums.length;</span><br><span class="line">    <span class="keyword">if</span>(len === <span class="number">3</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> getSum(nums);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    nums.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span> a-b);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> min = <span class="literal">Infinity</span>;</span><br><span class="line">    <span class="keyword">let</span> res;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len - <span class="number">2</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">let</span> basic = nums[i];</span><br><span class="line">        <span class="keyword">let</span> left = i + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">let</span> right = len - <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">            <span class="keyword">let</span> sum = basic + nums[left] + nums[right];</span><br><span class="line">            <span class="keyword">let</span> diff = <span class="built_in">Math</span>.abs(sum - target);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(diff &lt; min)&#123;</span><br><span class="line">                min = diff;</span><br><span class="line">                res = sum;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(sum &lt; target)&#123;</span><br><span class="line">                left ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>( sum &gt; target)&#123;</span><br><span class="line">                right --;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> sum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">nums</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> nums.reduce(<span class="function">(<span class="params">total, cur</span>)=&gt;</span> total + cur, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h3><p><a href="https://mp.weixin.qq.com/s/7mJSpnHE319swy0LStpavQ" target="_blank" rel="noopener">双指针问题</a></p>
 
       
     </div>
@@ -455,7 +457,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|Two_Pointer|16-3Sum_Closet/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/LeetCode|Tree|617_Merge_Tree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -469,7 +471,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/07/14/LeetCode%7CTwo_Pointer%7C16-3Sum_Closet/" class="post-title-link" itemprop="url">LeetCode|Two_Pointer|16 3Sum Closet</a>
+            <a href="/2020/07/14/LeetCode%7CTree%7C617_Merge_Tree/" class="post-title-link" itemprop="url">LeetCode|Tree| 617 Merge_Tree</a>
         </h2>
 
         <div class="post-meta">
@@ -486,7 +488,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-19 03:49:39" itemprop="dateModified" datetime="2020-07-19T03:49:39+08:00">2020-07-19</time>
+                <time title="修改时间：2020-07-19 03:39:41" itemprop="dateModified" datetime="2020-07-19T03:39:41+08:00">2020-07-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -498,7 +500,7 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Two-Pointer/" itemprop="url" rel="index"><span itemprop="name">Two_Pointer</span></a>
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%8C%E6%A0%91/" itemprop="url" rel="index"><span itemprop="name">数据结构，树</span></a>
                 </span>
             </span>
 
@@ -513,21 +515,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>16—<a href="https://leetcode.com/problems/3sum-closest/" target="_blank" rel="noopener">3Sum Closest</a><br>Medium</p>
-<p>Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
+          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a><a href="https://leetcode.com/problems/merge-two-binary-trees/" target="_blank" rel="noopener">题目</a></h1><p>617- Merge Two Binary Trees</p>
+<p>Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not.</p>
+<p>You need to merge them into a new binary tree. The merge rule is that if two nodes overlap, then sum node values up as the new value of the merged node. Otherwise, the NOT null node will be used as the node of new tree.</p>
 <p>Example 1:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums &#x3D; [-1,2,1,-4], target &#x3D; 1</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 &#x3D; 2).</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Input:<br>    Tree 1                     Tree 2<br>          1                         2<br>         / \                       / \<br>        3   2                     1   3<br>       /                           \   \<br>      5                             4   7<br>Output:<br>Merged tree:<br>         3<br>        / <br>       4   5<br>      / \   \<br>     5   4   7</p>
+</blockquote>
+<p>Note: The merging process must start from the root nodes of both trees.</p>
+<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val, left, right) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.left = (left===undefined ? null : left)</span></span><br><span class="line"><span class="comment"> *     this.right = (right===undefined ? null : right)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;TreeNode&#125;</span> <span class="variable">t1</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;TreeNode&#125;</span> <span class="variable">t2</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;TreeNode&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> <span class="comment">//递归算法：</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 1.以预购方式遍历树</span></span><br><span class="line"><span class="comment">// 2.检查两个树节点是否均为NULL</span></span><br><span class="line"><span class="comment">// 1.如果不是，则更新值</span></span><br><span class="line"><span class="comment">// 3.递归左子树</span></span><br><span class="line"><span class="comment">// 4.重复右子树</span></span><br><span class="line"><span class="comment">// 5.返回更新的树的根</span></span><br><span class="line"><span class="keyword">var</span> mergeTrees = <span class="function"><span class="keyword">function</span>(<span class="params">t1, t2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!t1 &amp;&amp; !t2)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!t1 || !t2)&#123;</span><br><span class="line">        <span class="keyword">return</span> t1 || t2;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> root = <span class="keyword">new</span> TreeNode(t1.val + t2.val);</span><br><span class="line">    </span><br><span class="line">    root.left = mergeTrees(t1.left, t2.left);</span><br><span class="line">    root.right = mergeTrees(t1.right, t2.right);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-
-<p>Constraints:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 &lt;&#x3D; nums.length &lt;&#x3D; 10^3</span><br><span class="line">-10^3 &lt;&#x3D; nums[i] &lt;&#x3D; 10^3</span><br><span class="line">-10^4 &lt;&#x3D; target &lt;&#x3D; 10^4</span><br></pre></td></tr></table></figure>
-<h1 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h1><h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3><p>先按照升序排序，然后分别从左往右依次选择一个基础点 i（0 &lt;= i &lt;= nums.length - 3），在基础点的右侧用双指针去不断的找最小的差值。</p>
-<p>假设基础点是 i，初始化的时候，双指针分别是：</p>
-<p>left：i + 1，基础点右边一位。<br>right: nums.length - 1 数组最后一位。<br>然后求此时的和，如果和大于 target，那么可以把右指针左移一位，去试试更小一点的值，反之则把左指针右移。</p>
-<p>在这个过程中，不断更新全局的最小差值 min，和此时记录下来的和 res。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number[]&#125;</span> <span class="variable">nums</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">target</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> threeSumClosest = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> len = nums.length;</span><br><span class="line">    <span class="keyword">if</span>(len === <span class="number">3</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> getSum(nums);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    nums.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span> a-b);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> min = <span class="literal">Infinity</span>;</span><br><span class="line">    <span class="keyword">let</span> res;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len - <span class="number">2</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">let</span> basic = nums[i];</span><br><span class="line">        <span class="keyword">let</span> left = i + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">let</span> right = len - <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">            <span class="keyword">let</span> sum = basic + nums[left] + nums[right];</span><br><span class="line">            <span class="keyword">let</span> diff = <span class="built_in">Math</span>.abs(sum - target);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(diff &lt; min)&#123;</span><br><span class="line">                min = diff;</span><br><span class="line">                res = sum;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(sum &lt; target)&#123;</span><br><span class="line">                left ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>( sum &gt; target)&#123;</span><br><span class="line">                right --;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> sum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">nums</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> nums.reduce(<span class="function">(<span class="params">total, cur</span>)=&gt;</span> total + cur, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h3><p><a href="https://mp.weixin.qq.com/s/7mJSpnHE319swy0LStpavQ" target="_blank" rel="noopener">双指针问题</a></p>
+<h2 id="非递归-迭代）"><a href="#非递归-迭代）" class="headerlink" title="非递归(迭代）"></a>非递归(迭代）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;迭代算法：</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; 1.创建一个堆栈</span><br><span class="line">&#x2F;&#x2F; 2.将两棵树的根节点推入堆栈。</span><br><span class="line">&#x2F;&#x2F; 3.当堆栈不为空时，执行以下步骤：</span><br><span class="line">	&#x2F;&#x2F; 1.从堆栈顶部弹出一个节点对</span><br><span class="line">	&#x2F;&#x2F; 2.对于每个删除的节点对，添加与两个节点对应的值，并更新第一棵树中相应节点的值</span><br><span class="line">	&#x2F;&#x2F; 3.如果第一棵树的左子节点存在，则将两棵树的左子节点（对）推入堆栈。</span><br><span class="line">	&#x2F;&#x2F; 4.如果第一棵树的左子节点不存在，则将第二棵树的左子节点附加到第一棵树的当前节点</span><br><span class="line">	&#x2F;&#x2F; 5.对正确的子对也执行相同的操作。</span><br><span class="line">	&#x2F;&#x2F; 6.如果当前两个节点均为NULL，则继续从堆栈中弹出下一个节点。</span><br><span class="line">&#x2F;&#x2F;4. 返回</span><br></pre></td></tr></table></figure>
+<p>迭代算法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mergeTrees = <span class="function">(<span class="params">t1, t2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (t1 === <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> t2;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> stack = [];</span><br><span class="line">  stack.push([t1, t2]);</span><br><span class="line">  <span class="keyword">while</span> (stack.length !== <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> t = stack.pop();</span><br><span class="line">    <span class="keyword">if</span> (t[<span class="number">0</span>] === <span class="literal">null</span> || t[<span class="number">1</span>] === <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    t[<span class="number">0</span>].val += t[<span class="number">1</span>].val;</span><br><span class="line">    <span class="keyword">if</span> (t[<span class="number">0</span>].left === <span class="literal">null</span>) &#123;</span><br><span class="line">      t[<span class="number">0</span>].left = t[<span class="number">1</span>].left;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      stack.push([t[<span class="number">0</span>].left, t[<span class="number">1</span>].left]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (t[<span class="number">0</span>].right === <span class="literal">null</span>) &#123;</span><br><span class="line">      t[<span class="number">0</span>].right = t[<span class="number">1</span>].right;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      stack.push([t[<span class="number">0</span>].right, t[<span class="number">1</span>].right]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> t1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -843,6 +843,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/JS-DOM-%E8%99%9A%E6%8B%9FDOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Weihong Xu">
+      <meta itemprop="description" content="大前端成长之路">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/13/JS-DOM-%E8%99%9A%E6%8B%9FDOM/" class="post-title-link" itemprop="url">前端｜DOM ｜虚拟DOM</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-13 12:12:57" itemprop="dateCreated datePublished" datetime="2020-07-13T12:12:57+08:00">2020-07-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-18 19:12:02" itemprop="dateModified" datetime="2020-07-18T19:12:02+08:00">2020-07-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DOM/" itemprop="url" rel="index"><span itemprop="name">DOM</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/Angular%E5%8E%86%E5%8F%B2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -952,87 +1033,6 @@
 </ol>
 <p>#Angular 8    </p>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/JS-DOM-%E8%99%9A%E6%8B%9FDOM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Weihong Xu">
-      <meta itemprop="description" content="大前端成长之路">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JavaScript|JVM|前端面试之路">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/13/JS-DOM-%E8%99%9A%E6%8B%9FDOM/" class="post-title-link" itemprop="url">前端｜DOM ｜虚拟DOM</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-13 12:12:57" itemprop="dateCreated datePublished" datetime="2020-07-13T12:12:57+08:00">2020-07-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-18 19:12:02" itemprop="dateModified" datetime="2020-07-18T19:12:02+08:00">2020-07-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/DOM/" itemprop="url" rel="index"><span itemprop="name">DOM</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1>
       
     </div>
 
