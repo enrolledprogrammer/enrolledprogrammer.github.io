@@ -3,10 +3,10 @@
   <title>JavaScript|JVM|前端面试之路</title>
   <icon>http://yoursite.com/icon.png</icon>
   <subtitle>Javascript|Java|Python|Rust</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-07-15T01:30:02.089Z</updated>
+  <updated>2021-07-15T08:45:55.321Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,35 +21,33 @@
     <link href="http://yoursite.com/2021/05/19/%E4%BA%A4%E6%98%93|%E8%87%AA%E5%88%B6%E6%8C%87%E6%A0%87|%E9%AB%98%E8%83%9C%E7%8E%87%E4%BA%A4%E6%98%93%E6%A8%A1%E5%9E%8B_%E4%B8%8B%E5%8D%95%E5%89%8D%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E6%AD%A5-%E7%9B%88%E4%BA%8F%E6%AF%94/"/>
     <id>http://yoursite.com/2021/05/19/%E4%BA%A4%E6%98%93|%E8%87%AA%E5%88%B6%E6%8C%87%E6%A0%87|%E9%AB%98%E8%83%9C%E7%8E%87%E4%BA%A4%E6%98%93%E6%A8%A1%E5%9E%8B_%E4%B8%8B%E5%8D%95%E5%89%8D%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E6%AD%A5-%E7%9B%88%E4%BA%8F%E6%AF%94/</id>
     <published>2021-05-19T07:25:57.000Z</published>
-    <updated>2021-07-15T01:30:02.089Z</updated>
+    <updated>2021-07-15T08:45:55.321Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot;
+    <summary type="html">&lt;h1 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="交易" scheme="http://yoursite.com/categories/%E4%BA%A4%E6%98%93/"/>
+    <category term="交易" scheme="http://yoursite.com/categories/%E4%BA%A4%E6%98%93/"/>
     
-      <category term="自制指标" scheme="http://yoursite.com/categories/%E8%87%AA%E5%88%B6%E6%8C%87%E6%A0%87/"/>
+    <category term="自制指标" scheme="http://yoursite.com/categories/%E8%87%AA%E5%88%B6%E6%8C%87%E6%A0%87/"/>
     
-      <category term="高胜率" scheme="http://yoursite.com/categories/%E9%AB%98%E8%83%9C%E7%8E%87/"/>
+    <category term="高胜率" scheme="http://yoursite.com/categories/%E9%AB%98%E8%83%9C%E7%8E%87/"/>
     
     
-      <category term="交易" scheme="http://yoursite.com/tags/%E4%BA%A4%E6%98%93/"/>
+    <category term="交易" scheme="http://yoursite.com/tags/%E4%BA%A4%E6%98%93/"/>
     
-      <category term="指标" scheme="http://yoursite.com/tags/%E6%8C%87%E6%A0%87/"/>
+    <category term="指标" scheme="http://yoursite.com/tags/%E6%8C%87%E6%A0%87/"/>
     
-      <category term="自制指标" scheme="http://yoursite.com/tags/%E8%87%AA%E5%88%B6%E6%8C%87%E6%A0%87/"/>
+    <category term="自制指标" scheme="http://yoursite.com/tags/%E8%87%AA%E5%88%B6%E6%8C%87%E6%A0%87/"/>
     
-      <category term="高胜率" scheme="http://yoursite.com/tags/%E9%AB%98%E8%83%9C%E7%8E%87/"/>
+    <category term="高胜率" scheme="http://yoursite.com/tags/%E9%AB%98%E8%83%9C%E7%8E%87/"/>
     
   </entry>
   
@@ -60,23 +58,21 @@
     <published>2020-09-01T00:00:00.000Z</published>
     <updated>2021-02-16T01:17:26.248Z</updated>
     
-    <summary type="html">
-    
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/categories/Javascript/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Less" scheme="http://yoursite.com/categories/Less/"/>
+    <category term="Javascript" scheme="http://yoursite.com/categories/Javascript/"/>
+    
+    <category term="Less" scheme="http://yoursite.com/categories/Less/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
     
-      <category term="“Less”" scheme="http://yoursite.com/tags/%E2%80%9CLess%E2%80%9D/"/>
+    <category term="“Less”" scheme="http://yoursite.com/tags/%E2%80%9CLess%E2%80%9D/"/>
     
   </entry>
   
@@ -87,37 +83,35 @@
     <published>2020-08-18T00:25:57.000Z</published>
     <updated>2020-08-18T10:22:19.325Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;Fiber-vs-VDOM&quot;&gt;&lt;a href=&quot;#Fiber-vs-VDOM&quot; class=&quot;headerlink&quot; title=&quot;Fiber vs VDOM&quot;&gt;&lt;/a&gt;Fiber vs
+    <summary type="html">&lt;h1 id=&quot;Fiber-vs-VDOM&quot;&gt;&lt;a href=&quot;#Fiber-vs-VDOM&quot; class=&quot;headerlink&quot; title=&quot;Fiber vs VDOM&quot;&gt;&lt;/a&gt;Fiber vs</summary>
         
       
     
-    </summary>
     
     
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
     
-      <category term="垃圾回收" scheme="http://yoursite.com/categories/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
+    <category term="垃圾回收" scheme="http://yoursite.com/categories/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
     
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
     
-      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
     
-      <category term="Go" scheme="http://yoursite.com/categories/Go/"/>
+    <category term="Go" scheme="http://yoursite.com/categories/Go/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
     
   </entry>
   
@@ -128,39 +122,37 @@
     <published>2020-08-13T07:25:57.000Z</published>
     <updated>2020-08-13T10:22:45.549Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;#垃圾回收思想&lt;/p&gt;
+    <summary type="html">&lt;p&gt;#垃圾回收思想&lt;/p&gt;
 &lt;p&gt;#垃圾回收算法&lt;/p&gt;
-&lt;h2 id=&quot;简单算法&quot;&gt;&lt;a href=&quot;#简单算法&quot; class=&quot;headerlink&quot; title=&quot;简单算法&quot;&gt;&lt;/a&gt;简单算法&lt;/h2&gt;&lt;h2 id=&quot;多线程垃圾回收-从G1开始&quot;&gt;&lt;a
+&lt;h2 id=&quot;简单算法&quot;&gt;&lt;a href=&quot;#简单算法&quot; class=&quot;headerlink&quot; title=&quot;简单算法&quot;&gt;&lt;/a&gt;简单算法&lt;/h2&gt;&lt;h2 id=&quot;多线程垃圾回收-从G1开始&quot;&gt;&lt;a</summary>
         
       
     
-    </summary>
     
     
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
     
-      <category term="垃圾回收" scheme="http://yoursite.com/categories/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
+    <category term="垃圾回收" scheme="http://yoursite.com/categories/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
     
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
     
-      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
     
-      <category term="Go" scheme="http://yoursite.com/categories/Go/"/>
+    <category term="Go" scheme="http://yoursite.com/categories/Go/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
     
   </entry>
   
@@ -171,27 +163,25 @@
     <published>2020-08-13T04:25:57.000Z</published>
     <updated>2020-08-13T07:18:50.412Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h1&gt;&lt;h2 id=&quot;语言&quot;&gt;&lt;a href=&quot;#语言&quot; class=&quot;headerlink&quot; title=&quot;语言&quot;&gt;&lt;/a&gt;语言&lt;/h2&gt;&lt;h3
+    <summary type="html">&lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h1&gt;&lt;h2 id=&quot;语言&quot;&gt;&lt;a href=&quot;#语言&quot; class=&quot;headerlink&quot; title=&quot;语言&quot;&gt;&lt;/a&gt;语言&lt;/h2&gt;&lt;h3</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
     
   </entry>
   
@@ -202,31 +192,29 @@
     <published>2020-08-13T00:25:57.000Z</published>
     <updated>2020-08-13T03:53:42.034Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;TypeScprit&quot;&gt;&lt;a href=&quot;#TypeScprit&quot; class=&quot;headerlink&quot;
+    <summary type="html">&lt;h1 id=&quot;TypeScprit&quot;&gt;&lt;a href=&quot;#TypeScprit&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
     
-      <category term="TypeScript" scheme="http://yoursite.com/categories/TypeScript/"/>
+    <category term="TypeScript" scheme="http://yoursite.com/categories/TypeScript/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
     
-      <category term="“TypeScript”" scheme="http://yoursite.com/tags/%E2%80%9CTypeScript%E2%80%9D/"/>
+    <category term="“TypeScript”" scheme="http://yoursite.com/tags/%E2%80%9CTypeScript%E2%80%9D/"/>
     
   </entry>
   
@@ -237,31 +225,29 @@
     <published>2020-08-05T00:25:57.000Z</published>
     <updated>2020-08-05T08:21:53.784Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;MVC-MVVM各种模式&quot;&gt;&lt;a href=&quot;#MVC-MVVM各种模式&quot; class=&quot;headerlink&quot; title=&quot;MVC, MVVM各种模式&quot;&gt;&lt;/a&gt;MVC,
+    <summary type="html">&lt;h1 id=&quot;MVC-MVVM各种模式&quot;&gt;&lt;a href=&quot;#MVC-MVVM各种模式&quot; class=&quot;headerlink&quot; title=&quot;MVC, MVVM各种模式&quot;&gt;&lt;/a&gt;MVC,</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="MVC" scheme="http://yoursite.com/categories/MVC/"/>
+    <category term="MVC" scheme="http://yoursite.com/categories/MVC/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
-      <category term="MVC" scheme="http://yoursite.com/tags/MVC/"/>
+    <category term="MVC" scheme="http://yoursite.com/tags/MVC/"/>
     
   </entry>
   
@@ -272,35 +258,33 @@
     <published>2020-08-02T18:23:00.000Z</published>
     <updated>2020-08-03T10:14:10.686Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;继承有多少种方法&quot;&gt;&lt;a href=&quot;#继承有多少种方法&quot; class=&quot;headerlink&quot; title=&quot;继承有多少种方法&quot;&gt;&lt;/a&gt;继承有多少种方法&lt;/h1&gt;&lt;p&gt;&lt;a
+    <summary type="html">&lt;h1 id=&quot;继承有多少种方法&quot;&gt;&lt;a href=&quot;#继承有多少种方法&quot; class=&quot;headerlink&quot; title=&quot;继承有多少种方法&quot;&gt;&lt;/a&gt;继承有多少种方法&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="继承" scheme="http://yoursite.com/categories/%E7%BB%A7%E6%89%BF/"/>
+    <category term="继承" scheme="http://yoursite.com/categories/%E7%BB%A7%E6%89%BF/"/>
     
-      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
-      <category term="继承" scheme="http://yoursite.com/tags/%E7%BB%A7%E6%89%BF/"/>
+    <category term="继承" scheme="http://yoursite.com/tags/%E7%BB%A7%E6%89%BF/"/>
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -311,31 +295,29 @@
     <published>2020-07-29T00:25:57.000Z</published>
     <updated>2020-07-29T10:56:58.931Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;源代码分析&quot;&gt;&lt;a href=&quot;#源代码分析&quot; class=&quot;headerlink&quot; title=&quot;源代码分析&quot;&gt;&lt;/a&gt;源代码分析&lt;/h1&gt;&lt;h1 id=&quot;收集&quot;&gt;&lt;a href=&quot;#收集&quot; class=&quot;headerlink&quot;
+    <summary type="html">&lt;h1 id=&quot;源代码分析&quot;&gt;&lt;a href=&quot;#源代码分析&quot; class=&quot;headerlink&quot; title=&quot;源代码分析&quot;&gt;&lt;/a&gt;源代码分析&lt;/h1&gt;&lt;h1 id=&quot;收集&quot;&gt;&lt;a href=&quot;#收集&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="React" scheme="http://yoursite.com/categories/React/"/>
+    <category term="React" scheme="http://yoursite.com/categories/React/"/>
     
-      <category term="源代码" scheme="http://yoursite.com/categories/%E6%BA%90%E4%BB%A3%E7%A0%81/"/>
+    <category term="源代码" scheme="http://yoursite.com/categories/%E6%BA%90%E4%BB%A3%E7%A0%81/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
-      <category term="源代码" scheme="http://yoursite.com/tags/%E6%BA%90%E4%BB%A3%E7%A0%81/"/>
+    <category term="源代码" scheme="http://yoursite.com/tags/%E6%BA%90%E4%BB%A3%E7%A0%81/"/>
     
   </entry>
   
@@ -346,31 +328,29 @@
     <published>2020-07-29T00:25:57.000Z</published>
     <updated>2020-08-01T08:48:00.528Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;关于Bind&quot;&gt;&lt;a href=&quot;#关于Bind&quot; class=&quot;headerlink&quot;
+    <summary type="html">&lt;h1 id=&quot;关于Bind&quot;&gt;&lt;a href=&quot;#关于Bind&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="bind" scheme="http://yoursite.com/categories/bind/"/>
+    <category term="bind" scheme="http://yoursite.com/categories/bind/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
-      <category term="bind" scheme="http://yoursite.com/tags/bind/"/>
+    <category term="bind" scheme="http://yoursite.com/tags/bind/"/>
     
   </entry>
   
@@ -381,34 +361,32 @@
     <published>2020-07-28T08:25:57.000Z</published>
     <updated>2020-08-13T10:22:56.051Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;#&lt;a href=&quot;https://www.bilibili.com/video/BV1tt4y1U74x&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;思想&lt;/a&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;#&lt;a href=&quot;https://www.bilibili.com/video/BV1tt4y1U74x&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;思想&lt;/a&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;使用Vue为了组件化框架&lt;ul&gt;
-&lt;li&gt;这个框架是由ES6
+&lt;li&gt;这个框架是由ES6</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/categories/Javascript/"/>
+    <category term="Javascript" scheme="http://yoursite.com/categories/Javascript/"/>
     
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
     
-      <category term="“Vue”" scheme="http://yoursite.com/tags/%E2%80%9CVue%E2%80%9D/"/>
+    <category term="“Vue”" scheme="http://yoursite.com/tags/%E2%80%9CVue%E2%80%9D/"/>
     
   </entry>
   
@@ -419,32 +397,30 @@
     <published>2020-07-28T08:25:57.000Z</published>
     <updated>2020-09-11T09:42:59.929Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;React优化&quot;&gt;&lt;a href=&quot;#React优化&quot; class=&quot;headerlink&quot; title=&quot;React优化&quot;&gt;&lt;/a&gt;React优化&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a
+    <summary type="html">&lt;h1 id=&quot;React优化&quot;&gt;&lt;a href=&quot;#React优化&quot; class=&quot;headerlink&quot; title=&quot;React优化&quot;&gt;&lt;/a&gt;React优化&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="React" scheme="http://yoursite.com/categories/React/"/>
+    <category term="React" scheme="http://yoursite.com/categories/React/"/>
     
-      <category term="优化" scheme="http://yoursite.com/categories/%E4%BC%98%E5%8C%96/"/>
+    <category term="优化" scheme="http://yoursite.com/categories/%E4%BC%98%E5%8C%96/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="React" scheme="http://yoursite.com/tags/React/"/>
+    <category term="React" scheme="http://yoursite.com/tags/React/"/>
     
-      <category term="“优化”" scheme="http://yoursite.com/tags/%E2%80%9C%E4%BC%98%E5%8C%96%E2%80%9D/"/>
+    <category term="“优化”" scheme="http://yoursite.com/tags/%E2%80%9C%E4%BC%98%E5%8C%96%E2%80%9D/"/>
     
   </entry>
   
@@ -455,31 +431,29 @@
     <published>2020-07-28T08:25:57.000Z</published>
     <updated>2020-08-10T08:28:17.137Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;Redux是什么-Hooks是否能替代&quot;&gt;&lt;a href=&quot;#Redux是什么-Hooks是否能替代&quot; class=&quot;headerlink&quot; title=&quot;Redux是什么 Hooks是否能替代&quot;&gt;&lt;/a&gt;Redux是什么 Hooks是否能替代&lt;/h1&gt;&lt;h2
+    <summary type="html">&lt;h1 id=&quot;Redux是什么-Hooks是否能替代&quot;&gt;&lt;a href=&quot;#Redux是什么-Hooks是否能替代&quot; class=&quot;headerlink&quot; title=&quot;Redux是什么 Hooks是否能替代&quot;&gt;&lt;/a&gt;Redux是什么 Hooks是否能替代&lt;/h1&gt;&lt;h2</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/categories/Javascript/"/>
+    <category term="Javascript" scheme="http://yoursite.com/categories/Javascript/"/>
     
-      <category term="Redux" scheme="http://yoursite.com/categories/Redux/"/>
+    <category term="Redux" scheme="http://yoursite.com/categories/Redux/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
     
-      <category term="“Redux”" scheme="http://yoursite.com/tags/%E2%80%9CRedux%E2%80%9D/"/>
+    <category term="“Redux”" scheme="http://yoursite.com/tags/%E2%80%9CRedux%E2%80%9D/"/>
     
   </entry>
   
@@ -490,31 +464,29 @@
     <published>2020-07-28T08:25:57.000Z</published>
     <updated>2020-08-01T08:48:56.918Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;Javascript中数组的用法&quot;&gt;&lt;a href=&quot;#Javascript中数组的用法&quot; class=&quot;headerlink&quot; title=&quot;Javascript中数组的用法&quot;&gt;&lt;/a&gt;Javascript中数组的用法&lt;/h1&gt;&lt;h2
+    <summary type="html">&lt;h1 id=&quot;Javascript中数组的用法&quot;&gt;&lt;a href=&quot;#Javascript中数组的用法&quot; class=&quot;headerlink&quot; title=&quot;Javascript中数组的用法&quot;&gt;&lt;/a&gt;Javascript中数组的用法&lt;/h1&gt;&lt;h2</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/categories/Javascript/"/>
+    <category term="Javascript" scheme="http://yoursite.com/categories/Javascript/"/>
     
-      <category term="数组" scheme="http://yoursite.com/categories/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="http://yoursite.com/categories/%E6%95%B0%E7%BB%84/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
     
-      <category term="“数组”" scheme="http://yoursite.com/tags/%E2%80%9C%E6%95%B0%E7%BB%84%E2%80%9D/"/>
+    <category term="“数组”" scheme="http://yoursite.com/tags/%E2%80%9C%E6%95%B0%E7%BB%84%E2%80%9D/"/>
     
   </entry>
   
@@ -525,56 +497,54 @@
     <published>2020-07-21T00:25:57.000Z</published>
     <updated>2020-08-03T17:55:55.923Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;#高阶函数&lt;br&gt;本博客来自于《javascript设计模式与开发实践》的内容总结。&lt;/p&gt;
-&lt;h2 id=&quot;作为参数：回调函数，排序&quot;&gt;&lt;a href=&quot;#作为参数：回调函数，排序&quot; class=&quot;headerlink&quot;
+    <summary type="html">&lt;p&gt;#高阶函数&lt;br&gt;本博客来自于《javascript设计模式与开发实践》的内容总结。&lt;/p&gt;
+&lt;h2 id=&quot;作为参数：回调函数，排序&quot;&gt;&lt;a href=&quot;#作为参数：回调函数，排序&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="函数" scheme="http://yoursite.com/categories/%E5%87%BD%E6%95%B0/"/>
+    <category term="函数" scheme="http://yoursite.com/categories/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="参数传递" scheme="http://yoursite.com/categories/%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/"/>
+    <category term="参数传递" scheme="http://yoursite.com/categories/%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/"/>
     
-      <category term="AOP" scheme="http://yoursite.com/categories/AOP/"/>
+    <category term="AOP" scheme="http://yoursite.com/categories/AOP/"/>
     
-      <category term="柯里化" scheme="http://yoursite.com/categories/%E6%9F%AF%E9%87%8C%E5%8C%96/"/>
+    <category term="柯里化" scheme="http://yoursite.com/categories/%E6%9F%AF%E9%87%8C%E5%8C%96/"/>
     
-      <category term="函数节流" scheme="http://yoursite.com/categories/%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/"/>
+    <category term="函数节流" scheme="http://yoursite.com/categories/%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/"/>
     
-      <category term="分时函数" scheme="http://yoursite.com/categories/%E5%88%86%E6%97%B6%E5%87%BD%E6%95%B0/"/>
+    <category term="分时函数" scheme="http://yoursite.com/categories/%E5%88%86%E6%97%B6%E5%87%BD%E6%95%B0/"/>
     
-      <category term="惰性加载" scheme="http://yoursite.com/categories/%E6%83%B0%E6%80%A7%E5%8A%A0%E8%BD%BD/"/>
+    <category term="惰性加载" scheme="http://yoursite.com/categories/%E6%83%B0%E6%80%A7%E5%8A%A0%E8%BD%BD/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
-      <category term="函数" scheme="http://yoursite.com/tags/%E5%87%BD%E6%95%B0/"/>
+    <category term="函数" scheme="http://yoursite.com/tags/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="参数传递]" scheme="http://yoursite.com/tags/%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/"/>
+    <category term="参数传递]" scheme="http://yoursite.com/tags/%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/"/>
     
-      <category term="AOP" scheme="http://yoursite.com/tags/AOP/"/>
+    <category term="AOP" scheme="http://yoursite.com/tags/AOP/"/>
     
-      <category term="柯里化" scheme="http://yoursite.com/tags/%E6%9F%AF%E9%87%8C%E5%8C%96/"/>
+    <category term="柯里化" scheme="http://yoursite.com/tags/%E6%9F%AF%E9%87%8C%E5%8C%96/"/>
     
-      <category term="函数节流" scheme="http://yoursite.com/tags/%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/"/>
+    <category term="函数节流" scheme="http://yoursite.com/tags/%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81/"/>
     
-      <category term="分时函数" scheme="http://yoursite.com/tags/%E5%88%86%E6%97%B6%E5%87%BD%E6%95%B0/"/>
+    <category term="分时函数" scheme="http://yoursite.com/tags/%E5%88%86%E6%97%B6%E5%87%BD%E6%95%B0/"/>
     
-      <category term="惰性加载" scheme="http://yoursite.com/tags/%E6%83%B0%E6%80%A7%E5%8A%A0%E8%BD%BD/"/>
+    <category term="惰性加载" scheme="http://yoursite.com/tags/%E6%83%B0%E6%80%A7%E5%8A%A0%E8%BD%BD/"/>
     
   </entry>
   
@@ -585,27 +555,25 @@
     <published>2020-07-21T00:25:57.000Z</published>
     <updated>2020-07-28T09:56:16.176Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;前端面试经验&quot;&gt;&lt;a href=&quot;#前端面试经验&quot; class=&quot;headerlink&quot; title=&quot;前端面试经验&quot;&gt;&lt;/a&gt;前端面试经验&lt;/h1&gt;&lt;h2 id=&quot;文章&quot;&gt;&lt;a href=&quot;#文章&quot; class=&quot;headerlink&quot;
+    <summary type="html">&lt;h1 id=&quot;前端面试经验&quot;&gt;&lt;a href=&quot;#前端面试经验&quot; class=&quot;headerlink&quot; title=&quot;前端面试经验&quot;&gt;&lt;/a&gt;前端面试经验&lt;/h1&gt;&lt;h2 id=&quot;文章&quot;&gt;&lt;a href=&quot;#文章&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
@@ -616,28 +584,26 @@
     <published>2020-07-21T00:25:57.000Z</published>
     <updated>2020-07-21T09:54:43.836Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;面向对象 Vs
+    <summary type="html">&lt;h1 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;面向对象 Vs</summary>
         
       
     
-    </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
@@ -648,31 +614,29 @@
     <published>2020-07-20T12:51:57.000Z</published>
     <updated>2021-07-13T21:45:09.270Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h1&gt;&lt;p&gt;Given a positive integer n, generate a square
+    <summary type="html">&lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h1&gt;&lt;p&gt;Given a positive integer n, generate a square</summary>
         
       
     
-    </summary>
     
     
-      <category term="LeetCode刷题" scheme="http://yoursite.com/categories/LeetCode%E5%88%B7%E9%A2%98/"/>
+    <category term="LeetCode刷题" scheme="http://yoursite.com/categories/LeetCode%E5%88%B7%E9%A2%98/"/>
     
-      <category term="Number" scheme="http://yoursite.com/categories/Number/"/>
+    <category term="Number" scheme="http://yoursite.com/categories/Number/"/>
     
-      <category term="Medium" scheme="http://yoursite.com/categories/Medium/"/>
+    <category term="Medium" scheme="http://yoursite.com/categories/Medium/"/>
     
     
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
     
-      <category term="Number" scheme="http://yoursite.com/tags/Number/"/>
+    <category term="Number" scheme="http://yoursite.com/tags/Number/"/>
     
-      <category term="Medium" scheme="http://yoursite.com/tags/Medium/"/>
+    <category term="Medium" scheme="http://yoursite.com/tags/Medium/"/>
     
   </entry>
   
@@ -683,31 +647,29 @@
     <published>2020-07-20T10:25:57.000Z</published>
     <updated>2020-07-20T11:31:07.114Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h1&gt;&lt;p&gt;Given an array of integers, return indices of the
+    <summary type="html">&lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h1&gt;&lt;p&gt;Given an array of integers, return indices of the</summary>
         
       
     
-    </summary>
     
     
-      <category term="LeetCode刷题" scheme="http://yoursite.com/categories/LeetCode%E5%88%B7%E9%A2%98/"/>
+    <category term="LeetCode刷题" scheme="http://yoursite.com/categories/LeetCode%E5%88%B7%E9%A2%98/"/>
     
-      <category term="HashMap" scheme="http://yoursite.com/categories/HashMap/"/>
+    <category term="HashMap" scheme="http://yoursite.com/categories/HashMap/"/>
     
-      <category term="Easy" scheme="http://yoursite.com/categories/Easy/"/>
+    <category term="Easy" scheme="http://yoursite.com/categories/Easy/"/>
     
     
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
     
-      <category term="HashMap" scheme="http://yoursite.com/tags/HashMap/"/>
+    <category term="HashMap" scheme="http://yoursite.com/tags/HashMap/"/>
     
-      <category term="Easy" scheme="http://yoursite.com/tags/Easy/"/>
+    <category term="Easy" scheme="http://yoursite.com/tags/Easy/"/>
     
   </entry>
   
@@ -718,33 +680,31 @@
     <published>2020-07-20T08:25:57.000Z</published>
     <updated>2020-07-20T08:40:34.031Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h1&gt;&lt;p&gt;Reverse a singly linked
+    <summary type="html">&lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h1&gt;&lt;p&gt;Reverse a singly linked</summary>
         
       
     
-    </summary>
     
     
-      <category term="LeetCode刷题" scheme="http://yoursite.com/categories/LeetCode%E5%88%B7%E9%A2%98/"/>
+    <category term="LeetCode刷题" scheme="http://yoursite.com/categories/LeetCode%E5%88%B7%E9%A2%98/"/>
     
-      <category term="LitNode" scheme="http://yoursite.com/categories/LitNode/"/>
+    <category term="LitNode" scheme="http://yoursite.com/categories/LitNode/"/>
     
-      <category term="Easy" scheme="http://yoursite.com/categories/Easy/"/>
+    <category term="Easy" scheme="http://yoursite.com/categories/Easy/"/>
     
-      <category term="Reverse" scheme="http://yoursite.com/categories/Reverse/"/>
+    <category term="Reverse" scheme="http://yoursite.com/categories/Reverse/"/>
     
     
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
     
-      <category term="LitNode" scheme="http://yoursite.com/tags/LitNode/"/>
+    <category term="LitNode" scheme="http://yoursite.com/tags/LitNode/"/>
     
-      <category term="Reverse" scheme="http://yoursite.com/tags/Reverse/"/>
+    <category term="Reverse" scheme="http://yoursite.com/tags/Reverse/"/>
     
   </entry>
   
